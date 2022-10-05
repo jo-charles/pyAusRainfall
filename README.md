@@ -37,10 +37,27 @@ Cet ensemble de données contient environ 10 ans d'observations météorologique
 - Les observations proviennent de nombreuses stations météorologiques. Les observations quotidiennes sont disponibles sur http://www.bom.gov.au/climate/data.
 - Un exemple des dernières observations météorologiques à Canberra : http://www.bom.gov.au/climate/dwo/IDCJDW2801.latest.shtml
 - Définitions adaptées de http://www.bom.gov.au/climate/dwo/IDCJDW0000.shtml
-- Source des données : http://www.bom.gov.au/climate/dwo/ et http://www.bom.gov.au/climate/data.
+- Source des données : http://www.bom.gov.au/climate/dwo/ et http://www.bom.gov.au/climate/data
 
 ## Conditions de validation du projet
 - Exploration des données (vision d’ensemble sur les données)
 - Visualisations commentées et analysées
-- Rapport technique + programmes + Github
+- Rapport technique + programmes + GitHub
 - Une démo (Streamlit)
+
+## Notes
+	• Variables ignorées: 
+        • 'Date'
+        • 'WindGustDir'
+        • 'WindDir9am'
+        • 'WindDir3pm'
+	• Variables crées: 
+        • 'Temp_Delta_MinMax'
+        • 'Humidity_Delta'
+        • 'clim_chaud_humide'
+        • 'clim_méditerranéen'
+        • 'clim_sec'
+        • 'clim_tempéré_froid'
+	• Variables dont les valeurs manquantes ont été supprimées:
+        • 'RainToday'
+        • 'RainTomorrow'
