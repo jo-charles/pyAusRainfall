@@ -1,6 +1,6 @@
 # Prévisions météo en Australie
 
-## Consignes de l'étape 1 : "Audit des données + DataViz’"
+## Consignes de l'itération 1 : "Audit des données + DataViz’"
 
 Fixer votre jeu de données et faire une analyse presque exhaustive de ce dernier.
 
@@ -21,7 +21,7 @@ Pour chaque visualisation, j’attends:
 - Un commentaire précis, qui analyse la figure et apporte un avis métier
 - Une validation du constat par des manipulations de données, ou un test statistique
 
-## Plan
+### Plan
 Préparation et nettoyage des données communes:
 
 - Observation du jeu de données initial
@@ -44,7 +44,7 @@ Etablir des axes d’intérêt pour les visualisations et les répartir:
 
 Prévoir une session pour mettre en commun, nettoyer les codes et rédiger le rapport.
 
-**Deadline:** Dimanche 3 juillet
+**Deadline:** Dimanche 3 juillet 2022
 
 ## Consignes de l'itération 2 : "Modélisation"
 
@@ -59,7 +59,7 @@ Prévoir une session pour mettre en commun, nettoyer les codes et rédiger le ra
         • Séries Temporelles
         • Pluie à J+3 et J+7
     
-**Deadline:** Dimanche 11 septembre
+**Deadline:** Dimanche 11 septembre 2022
     
 ## Consignes de l'itération 3 : "Modélisation"
 
@@ -67,7 +67,7 @@ Prévoir une session pour mettre en commun, nettoyer les codes et rédiger le ra
 	2. Explorer les stratégies "Deep Learning" ou "Séries Temporelles".
 	3. Tester différentes variables cibles telles que le vent ou la température.
 
-**Deadline:** Mercredi 28 septembre
+**Deadline:** Mercredi 28 septembre 2022
 
 ## Consignes de l'itération 4 : "Modélisation"
     1. Finaliser la modélisation: 
@@ -84,5 +84,5 @@ Prévoir une session pour mettre en commun, nettoyer les codes et rédiger le ra
     2. Organiser le GitHub
     3. Rapport final: sous template que je vous fournirai la prochaine fois
 
-**Synchro:** Mardi 18 octobre à 17h30 \
+**Synchro:** Mardi 18 octobre 2022 à 17h30 \
 **Deadline:** TBD
