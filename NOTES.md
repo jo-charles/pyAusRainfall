@@ -18,3 +18,9 @@
         • 'RainTomorrow'
 
 ## Suggestions d'améliorations
+	• Utilisation des variables catégorielles
+	• Utilisation de Spark ML pour effectuer les algorithmes de classification tels que:
+        • LogisticRegression() pour effectuer une régression logistique
+        • DecisionTreeClassifier() pour un arbre de régression simple
+        • RandomForestClassifier() pour une forêt aléatoire
+        • LinearSVC() pour un SVM de régression à noyau linéaire
