@@ -33,14 +33,27 @@ Cet ensemble de données contient environ 10 ans d'observations météorologique
 - **RainToday** : ***TO TRANSLATE**: Boolean: 1 if precipitation (mm) in the 24 hours to 9am exceeds 1mm, otherwise 0*.
 - **RainTomorrow** : ***TO TRANSLATE**: The amount of next day rain in mm. Used to create response variable RainTomorrow. A kind of measure of the "risk"*.
 
+## Notebooks utilisés
+- **"common_pyAusRainfall_dataviz.ipynb"** exploration et visualisation des données,
+- **"common_pyAusRainfall_preprocessing.ipynb":** prétraitement des données,
+- **"common_pyAusRainfall_features_selection.ipynb":** étude standalone de sélection des variables (**à approfondir**),
+- **"common_pyAusRainfall_modelisation_with_resampling.ipynb":**
+    - contient les modélisations avec sous-échantillonnage,
+    - les scores sont résumés uniquement pour les modélisations avec sous-échantillonnage,
+- **"common_pyAusRainfall_modelisation_without_resampling.ipynb":** copie du fichier **"common_pyAusRainfall_modelisation_with_resampling.ipynb"** avec les particularités suivantes:
+    - contient les modélisations sans sous-échantillonnage,
+    - les scores sont résumés pour les modélisations avec et sans sous-échantillonnage,
+- **"pyAusRainfall_long-term_forecasting.ipynb:"** étude des prévisions à J+3 et J+7,
+- **"pyAusRainfall_Time_series.ipynb":** analyse temporelle de la pluviométrie.
+
 ## Benchmark / Bibliographie / Source
 - Les observations proviennent de nombreuses stations météorologiques. Les observations quotidiennes sont disponibles sur http://www.bom.gov.au/climate/data.
 - Un exemple des dernières observations météorologiques à Canberra : http://www.bom.gov.au/climate/dwo/IDCJDW2801.latest.shtml
 - Définitions adaptées de http://www.bom.gov.au/climate/dwo/IDCJDW0000.shtml
-- Source des données : http://www.bom.gov.au/climate/dwo/ et http://www.bom.gov.au/climate/data.
+- Source des données : http://www.bom.gov.au/climate/dwo/ et http://www.bom.gov.au/climate/data
 
 ## Conditions de validation du projet
 - Exploration des données (vision d’ensemble sur les données)
 - Visualisations commentées et analysées
-- Rapport technique + programmes + Github
+- Rapport technique + programmes + GitHub
 - Une démo (Streamlit)
