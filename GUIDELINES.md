@@ -84,5 +84,22 @@ Prévoir une session pour mettre en commun, nettoyer les codes et rédiger le ra
     2. Organiser le GitHub
     3. Rapport final: sous template que je vous fournirai la prochaine fois
 
+### Répartition du travail
+	• Joseph: 
+        • Restructuration du repository et mise au propre des codes sur GitHub
+        • Interprétabilité "SVM"
+        • Amélioration du modèle de prédiction à J+3, J+7
+    • Anne-Claire: 
+        • Rédaction du pré-rapport final
+        • Interprétabilité "Linear Regression"
+    • Geneviève: 
+        • Interprétabilité "Decision Tree"
+        • Interprétabilité "Random Forest"
+        • Modèle de prévision des températures
+    • Olivier: 
+        • Amélioration de l'étude "Time Series"
+        • Interprétabilité "KNN"
+
+**Synchro (interne):** Jeudi 13 octobre 2022 à 12h30 \
 **Synchro:** Mardi 18 octobre 2022 à 17h30 \
 **Deadline:** TBD
