@@ -46,11 +46,12 @@ Cet ensemble de données contient environ 10 ans d'observations météorologique
 
 03_Data_Modeling:
 - **"common_pyAusRainfall_modelisation_with_resampling.ipynb":**
-    - contient les modélisations avec sous-échantillonnage
-    - les scores sont résumés uniquement pour les modélisations avec sous-échantillonnage
-- **"common_pyAusRainfall_modelisation_without_resampling.ipynb":** copie du fichier "common_pyAusRainfall_modelisation_with_resampling.ipynb" avec les particularités suivantes:
-    - contient les modélisations sans sous-échantillonnage
-    - les scores sont résumés pour les modélisations avec et sans sous-échantillonnage
+    - modélisations avec sous-échantillonnage
+    - scores uniquement pour les modélisations avec sous-échantillonnage
+- **"common_pyAusRainfall_modelisation_without_resampling.ipynb":** 
+    - copie du fichier "common_pyAusRainfall_modelisation_with_resampling.ipynb" avec les particularités suivantes:
+        - modélisations sans sous-échantillonnage
+        - scores résumés pour les modélisations avec et sans sous-échantillonnage
 - **"pyAusRainfall_short-term_forecasting.ipynb:"** 
     - étude des prévisions des précipitations à J+1, J+3 et J+7 par les méthodes des séries temporelles
 - **"pyAusRainfall_Time_series.ipynb":** 
