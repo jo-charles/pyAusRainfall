@@ -34,23 +34,36 @@ Cet ensemble de données contient environ 10 ans d'observations météorologique
 - **RainTomorrow** : vaut 1 si les précipitations (en mm) du lendemain sont supérieur à 1mm, 0 sinon.
 
 ## Notebooks utilisés
+01_Data_Visualization:
 - **"common_pyAusRainfall_dataviz.ipynb":** 
-    - exploration et visualisation des données,
-- **"common_pyAusRainfall_preprocessing.ipynb":** 
-    - prétraitement des données,
-- **"common_pyAusRainfall_features_selection.ipynb":** 
-    - étude standalone de sélection des variables (**à approfondir**),
-- **"common_pyAusRainfall_modelisation_with_resampling.ipynb":**
-    - contient les modélisations avec sous-échantillonnage,
-    - les scores sont résumés uniquement pour les modélisations avec sous-échantillonnage,
-- **"common_pyAusRainfall_modelisation_without_resampling.ipynb":** copie du fichier "common_pyAusRainfall_modelisation_with_resampling.ipynb" avec les particularités suivantes:
-    - contient les modélisations sans sous-échantillonnage,
-    - les scores sont résumés pour les modélisations avec et sans sous-échantillonnage,
-- **"pyAusRainfall_long-term_forecasting.ipynb:"** 
-    - étude des prévisions à J+3 et J+7,
-- **"pyAusRainfall_Time_series.ipynb":** 
-    - analyse temporelle de la pluviométrie.
+    - exploration et visualisation des données
 
+02_Data_Preprocessing:
+- **"common_pyAusRainfall_features_selection.ipynb":** 
+    - étude standalone de sélection des variables
+- **"common_pyAusRainfall_preprocessing.ipynb":** 
+    - prétraitement des données
+
+03_Data_Modeling:
+- **"common_pyAusRainfall_modelisation_with_resampling.ipynb":**
+    - contient les modélisations avec sous-échantillonnage
+    - les scores sont résumés uniquement pour les modélisations avec sous-échantillonnage
+- **"common_pyAusRainfall_modelisation_without_resampling.ipynb":** copie du fichier "common_pyAusRainfall_modelisation_with_resampling.ipynb" avec les particularités suivantes:
+    - contient les modélisations sans sous-échantillonnage
+    - les scores sont résumés pour les modélisations avec et sans sous-échantillonnage
+- **"pyAusRainfall_short-term_forecasting.ipynb:"** 
+    - étude des prévisions des précipitations à J+1, J+3 et J+7 par les méthodes des séries temporelles
+- **"pyAusRainfall_Time_series.ipynb":** 
+    - analyse temporelle de la pluviométrie
+    
+04_Model_Interpretability:
+- **"common_pyAusRainfall_DecisionTree.ipynb":**
+    - interprétabilité du modèle Decision Tree
+- **"common_pyAusRainfall_knn.ipynb":**
+    - interprétabilité du modèle KNN
+- **"common_pyAusRainfall_Logistic_Regression.ipynb":**
+    - interprétabilité du modèle Logistic Regression
+    
 ## Benchmark / Bibliographie / Source
 - Les observations proviennent de nombreuses stations météorologiques. Les observations quotidiennes sont disponibles sur http://www.bom.gov.au/climate/data.
 - Un exemple des dernières observations météorologiques à Canberra: http://www.bom.gov.au/climate/dwo/IDCJDW2801.latest.shtml
