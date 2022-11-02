@@ -48,11 +48,11 @@ Prévoir une session pour mettre en commun, nettoyer les codes et rédiger le ra
 
 ## Consignes de l'itération 2 : "Modélisation"
 
-	1. Ajouter les coordonnées géographiques (Australia Cities Database | Simplemaps.com)
-	2. Sélection des variables avec le test du chi2
-	3. Extraction du jeu de données final
-	4. Tableau des performances des algo avec et sans rééquilibrage
-	5. Choisir une seconde stratégie pour l’itération 2 parmi les suivantes:
+    1. Ajouter les coordonnées géographiques (Australia Cities Database | Simplemaps.com)
+    2. Sélection des variables avec le test du chi2
+    3. Extraction du jeu de données final
+    4. Tableau des performances des algo avec et sans rééquilibrage
+    5. Choisir une seconde stratégie pour l’itération 2 parmi les suivantes:
         • Classification des villes par clustering : création d'une nouvelle colonne catégorielle
         pour définir les différents types de climat selon les données climatiques
         • Deep Learning
@@ -63,9 +63,9 @@ Prévoir une session pour mettre en commun, nettoyer les codes et rédiger le ra
     
 ## Consignes de l'itération 3 : "Modélisation"
 
-	1. Effectuer la même comparaison de performances sur la pluie à J+3 et J+7, et comparer.
-	2. Explorer les stratégies "Deep Learning" ou "Séries Temporelles".
-	3. Tester différentes variables cibles telles que le vent ou la température.
+    1. Effectuer la même comparaison de performances sur la pluie à J+3 et J+7, et comparer.
+    2. Explorer les stratégies "Deep Learning" ou "Séries Temporelles".
+    3. Tester différentes variables cibles telles que le vent ou la température.
 
 **Deadline:** Mercredi 28 septembre 2022
 
@@ -85,7 +85,7 @@ Prévoir une session pour mettre en commun, nettoyer les codes et rédiger le ra
     3. Rapport final: sous template que je vous fournirai la prochaine fois
 
 ### Répartition du travail
-	• Joseph: 
+    • Joseph: 
         • Restructuration du repository et mise au propre des codes sur GitHub
         • Interprétabilité "SVM"
         • Amélioration du modèle de prédiction à J+3, J+7
@@ -99,7 +99,27 @@ Prévoir une session pour mettre en commun, nettoyer les codes et rédiger le ra
     • Olivier: 
         • Amélioration de l'étude "Time Series"
         • Interprétabilité "KNN"
-
+        
 **Synchro (interne):** Jeudi 13 octobre 2022 à 12h30 \
 **Synchro:** Mardi 18 octobre 2022 à 17h30 \
-**Deadline:** TBD
+**Deadline:** Mercredi 02 novembre 2022 à 17h30
+
+## Consignes de l'itération 5 : "Rapport"
+    1. Etablir les forces et faiblesses des modèles
+    2. Juger de l’interprétabilité du modèle retenu
+    3. Etablir les conclusions de la modélisation
+    4. Structurer le repository GitHub en dossiers organisés
+    5. Rédiger le rapport final à partir du template fourni. 
+        • Format du rapport: Google Docs 
+        • Envoi du rapport: Lundi 05 décembre 2022 (retour en asynchrone le Mercredi 7 décembre 2022)
+        • Deadline: Jeudi 15 décembre 2022
+
+### Répartition du travail
+    • Joseph: 
+    • Anne-Claire: 
+    • Geneviève: 
+    • Olivier: 
+
+**Synchro (interne):** Mardi 08 novembre 2022 à 17h \
+**Deadline:** Lundi 19 décembre 2022 à 17h00
+
