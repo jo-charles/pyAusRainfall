@@ -26,19 +26,19 @@
 - **RainTomorrow** : vaut 1 si les précipitations (en mm) du lendemain sont supérieur à 1mm, 0 sinon.
 
 ## Cadre méthodologique
-**Variables ignorées** 
+- **Variables ignorées** : 
     - 'Date' (à l'exception des analyses temporelles)
     - 'WindGustDir'
     - 'WindDir9am'
     - 'WindDir3pm'
-**Variables crées**
+- **Variables crées** :
     - 'Temp_Delta_MinMax'
     - 'Humidity_Delta'
     - 'clim_chaud_humide'
     - 'clim_méditerranéen'
     - 'clim_sec'
     - 'clim_tempéré_froid'
-**Variables dont les valeurs manquantes ont été supprimées**
+- **Variables dont les valeurs manquantes ont été supprimées** :
     - 'RainToday'
     - 'RainTomorrow'
 
