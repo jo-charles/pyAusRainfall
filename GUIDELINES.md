@@ -40,7 +40,7 @@ Etablir des axes d’intérêt pour les visualisations et les répartir:
 - Influence de la pluie des jours précédents sur la pluie du lendemain
 - Influence des vents sur la pluie
 - Distribution des températures au cours de l’année suivant le climat
-- ...
+- etc.
 
 Prévoir une session pour mettre en commun, nettoyer les codes et rédiger le rapport.
 
