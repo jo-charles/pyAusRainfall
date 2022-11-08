@@ -58,7 +58,7 @@ https://www.kaggle.com/jsphyg/weather-dataset-rattle-package
 - Source des données: http://www.bom.gov.au/climate/dwo/ et http://www.bom.gov.au/climate/data
 
 ## Rapport technique
-https://docs.google.com/document/d/1S6TrWBeBhRvBYoifv7e_KQCzcM46asP6mtodZ3nJNcE
+**[Rapport Technique d’évaluation](https://docs.google.com/document/d/1S6TrWBeBhRvBYoifv7e_KQCzcM46asP6mtodZ3nJNcE)**
 
 ## Conditions de validation du projet
 - Exploration des données (vision d’ensemble sur les données)
