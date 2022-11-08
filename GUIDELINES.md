@@ -54,9 +54,9 @@
     
 ## Consignes de l'itération 3 : "Modélisation"
 
-    1. Effectuer la même comparaison de performances sur la pluie à J+3 et J+7, et comparer.
-    2. Explorer les stratégies "Deep Learning" ou "Séries Temporelles".
-    3. Tester différentes variables cibles telles que le vent ou la température.
+    1. Effectuer la même comparaison de performances sur la pluie à J+3 et J+7, et comparer
+    2. Explorer les stratégies "Deep Learning" ou "Séries Temporelles"
+    3. Tester différentes variables cibles telles que le vent ou la température
 
 **Deadline:** Mercredi 28 septembre 2022
 
@@ -100,7 +100,7 @@
     2. Juger de l’interprétabilité du modèle retenu
     3. Etablir les conclusions de la modélisation
     4. Structurer le repository GitHub en dossiers organisés
-    5. Rédiger le rapport final à partir du template fourni. 
+    5. Rédiger le rapport final à partir du template fourni 
         • Format du rapport: Google Docs 
         • Envoi du rapport: Lundi 05 décembre 2022 (retour en asynchrone le Mercredi 7 décembre 2022)
         • Deadline: Jeudi 15 décembre 2022
