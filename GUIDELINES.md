@@ -6,7 +6,7 @@
     2. Produire des visualisations pertinentes expliquant la structure, les difficultés et le biais du dataset. 
     3. Accompagner le travail d'analyses statistiques de qualité.
 
-    Pour le rapport, préparer 1 notebook ou word/pdf contenant deux sous-parties:
+    Pour le rapport, préparer un notebook ou word/pdf contenant deux sous-parties:
         - Une partie rapport d'exploration des données dans lequel vous allez analyser et comprendre vos jeux de données 
         (nombre de données, longueur, présentation des colonnes, etc.)
         - Un rapport de visualisations pertinentes d'environ 3/4 pages contenant au moins 5 visualisations jolies et 
@@ -73,7 +73,7 @@
         • Mettre au propre les codes sur GitHub
         • Support: rapport pdf ou word sur l’étape de modélisation
     2. Organiser le GitHub
-    3. Rapport final: sous template que je vous fournirai la prochaine fois
+    3. Rapport final: sous template
 
 ### Répartition du travail
     • Joseph: 
@@ -100,17 +100,30 @@
     2. Juger de l’interprétabilité du modèle retenu
     3. Etablir les conclusions de la modélisation
     4. Structurer le repository GitHub en dossiers organisés
-    5. Rédiger le rapport final à partir du template fourni 
-        • Format du rapport: Google Docs 
-        • Envoi du rapport: Lundi 05 décembre 2022 (retour en asynchrone le Mercredi 7 décembre 2022)
-        • Deadline: Jeudi 15 décembre 2022
+    5. Rédiger le rapport final (avec Google Docs) à partir du template fourni 
 
 ### Répartition du travail
     • Joseph: 
-    • Anne-Claire: 
-    • Geneviève: 
-    • Olivier: 
+        • Structurer le repository GitHub en dossiers organisés
+        • Exécuter le notebook "modelisation_with_resampling" de deux nouvelles manières:
+            • Intégrer l'argument "class_weight={0:2, 1:1}" lors de la définition des modèles
+            • Remplacer l'argument "scoring='accuracy'" par "scoring='f1-score'" dans l'appel de GridSearchCV()
+        • Communiquer sur les nouveaux résultats obtenus pour une prise en compte dans le rapport final
+        • Vérifier l'homogénéité des résultats sauvegardés avec ceux obtenus lors de l'exécution des modèles
+        • Reprendre la rédaction des notebooks "common_pyAusRainfall_RandomForest.ipynb" et "Prevision_temp.ipynb"
+        • Rédiger le rapport final à partir du template fourni (parties attribuées)
+    • Anne-Claire:
+        • Rédiger le rapport final à partir du template fourni (parties attribuées)
+    • Geneviève:
+        • Amélioration du modèle de prédiction à J+3, J+7 (méthode des arbres de décision avec courbes ROC pour J+1, J+3 et J+7)
+        • Juger de l’interprétabilité du modèle final retenu (Random Forest)
+        • Etablir les conclusions de la modélisation
+        • Rédiger le rapport final à partir du template fourni (parties attribuées)        
+    • Olivier:
+        • Etablir les forces et faiblesses des modèles
+        • Rédiger le rapport final à partir du template fourni (parties attribuées)
 
 **Synchro (interne):** Mardi 08 novembre 2022 à 17h30 \
+**Envoi du rapport:** Lundi 05 décembre 2022 (retour en asynchrone le Mercredi 7 décembre 2022) \
+**Deadline du rapport:** Jeudi 15 décembre 2022 \
 **Deadline:** Lundi 19 décembre 2022 à 17h00
-
