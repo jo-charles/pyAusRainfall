@@ -1,6 +1,6 @@
 # Prévisions météo en Australie
 
-## Consignes de l'itération 1 : "Audit des données + DataViz’"
+## Consignes de l'itération 1 : "Audit des données + DataViz"
 
     1. Fixer votre jeu de données et faire une analyse presque exhaustive de ce dernier.
     2. Produire des visualisations pertinentes expliquant la structure, les difficultés et le biais du dataset. 
