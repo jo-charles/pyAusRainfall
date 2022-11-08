@@ -7,8 +7,10 @@
     3. Accompagner le travail d'analyses statistiques de qualité.
 
     Pour le rapport, préparer 1 notebook ou word/pdf contenant deux sous-parties:
-        - Une partie rapport d'exploration des données dans lequel vous allez analyser et comprendre vos jeux de données (nombre de données, longueur, présentation des colonnes, etc.)
-        - Un rapport de visualisations pertinentes d'environ 3/4 pages contenant au moins 5 visualisations jolies et pertinentes, à accompagner d'analyses statistiques de qualité
+        - Une partie rapport d'exploration des données dans lequel vous allez analyser et comprendre vos jeux de données 
+        (nombre de données, longueur, présentation des colonnes, etc.)
+        - Un rapport de visualisations pertinentes d'environ 3/4 pages contenant au moins 5 visualisations jolies et 
+        pertinentes, à accompagner d'analyses statistiques de qualité
 
     Pour chaque visualisation:
         - Un commentaire précis, qui analyse la figure et apporte un avis "métier"
