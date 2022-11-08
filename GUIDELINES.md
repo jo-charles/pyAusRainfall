@@ -2,47 +2,36 @@
 
 ## Consignes de l'itération 1 : "Audit des données + DataViz’"
 
-Fixer votre jeu de données et faire une analyse presque exhaustive de ce dernier.
+    1. Fixer votre jeu de données et faire une analyse presque exhaustive de ce dernier.
+    2. Produire des visualisations pertinentes expliquant la structure, les difficultés et le biais du dataset. 
+    3. Accompagner le travail d'analyses statistiques de qualité.
 
-Produire des visualisations pertinentes expliquant la structure, les difficultés et le biais du dataset. Il faudra aussi accompagner votre travail d'analyses statistiques de qualité.
+    Pour le rapport, préparer 1 notebook ou word/pdf contenant deux sous-parties:
+        - Une partie rapport d'exploration des données dans lequel vous allez analyser et comprendre vos jeux de données (nombre de données, longueur, présentation des colonnes, etc.)
+        - Un rapport de visualisations pertinentes d'environ 3/4 pages contenant au moins 5 visualisations jolies et pertinentes, à accompagner d'analyses statistiques de qualité
 
-Pour chaque visualisation, j’attends:
-- Un commentaire précis, qui analyse la figure et apporte un avis “métier”
-- Une validation du constat par des manipulations de données, ou un test statistique
-
-Je vous rappelle les consignes adaptées du prochain rapport:
-Il faudra préparer 1 notebook ou word/pdf contenant deux sous parties:
-
-- Une partie rapport d'exploration des données dans lequel vous allez analyser et comprendre vos jeux de données. C’est la partie découverte des jeux de données (nombre de données, longueur, présentation des colonnes, etc.)
-- Un rapport de visualisations pertinentes d'environ 3/4 pages contenant au moins 5 visualisations jolies et surtout pertinentes. Il faudra aussi accompagner votre travail d'analyses statistiques de qualité.
-
-Pour chaque visualisation, j’attends:
-
-- Un commentaire précis, qui analyse la figure et apporte un avis métier
-- Une validation du constat par des manipulations de données, ou un test statistique
+    Pour chaque visualisation:
+        - Un commentaire précis, qui analyse la figure et apporte un avis "métier"
+        - Une validation du constat par des manipulations de données, ou un test statistique
 
 ### Plan
-Préparation et nettoyage des données communes:
-
-- Observation du jeu de données initial
-- Ajout de variables supplémentaires
-- Gestion des NANs
-- Encoding
-- Exporter le jeu de données
-
-Etablir des axes d’intérêt pour les visualisations et les répartir:
-
-- Corrélation
-- Représentation cartographique
-- Moyenne annuelles des précipitations
-- Influence pour la prévision de pluie
-- Influence de certains critères (indépendamment du climat)
-- Influence de la pluie des jours précédents sur la pluie du lendemain
-- Influence des vents sur la pluie
-- Distribution des températures au cours de l’année suivant le climat
-- etc.
-
-Prévoir une session pour mettre en commun, nettoyer les codes et rédiger le rapport.
+    1. Préparation et nettoyage des données communes:
+        • Observation du jeu de données initial
+        • Ajout de variables supplémentaires
+        • Gestion des NANs
+        • Encoding
+        • Exporter le jeu de données
+    2. Etablir des axes d’intérêt pour les visualisations et les répartir:
+        • Corrélation
+        • Représentation cartographique
+        • Moyenne annuelles des précipitations
+        • Influence pour la prévision de pluie
+        • Influence de certains critères (indépendamment du climat)
+        • Influence de la pluie des jours précédents sur la pluie du lendemain
+        • Influence des vents sur la pluie
+        • Distribution des températures au cours de l’année suivant le climat
+        • etc.
+    3. Prévoir une session pour mettre en commun, nettoyer les codes et rédiger le rapport.
 
 **Deadline:** Dimanche 3 juillet 2022
 
@@ -120,6 +109,6 @@ Prévoir une session pour mettre en commun, nettoyer les codes et rédiger le ra
     • Geneviève: 
     • Olivier: 
 
-**Synchro (interne):** Mardi 08 novembre 2022 à 17h \
+**Synchro (interne):** Mardi 08 novembre 2022 à 17h30 \
 **Deadline:** Lundi 19 décembre 2022 à 17h00
 
