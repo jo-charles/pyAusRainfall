@@ -2,9 +2,9 @@
 
 ## Consignes de l'itération 1 : "Audit des données + DataViz"
 
-    1. Fixer votre jeu de données et faire une analyse presque exhaustive de ce dernier.
-    2. Produire des visualisations pertinentes expliquant la structure, les difficultés et le biais du dataset. 
-    3. Accompagner le travail d'analyses statistiques de qualité.
+    1. Fixer votre jeu de données et faire une analyse presque exhaustive de ce dernier
+    2. Produire des visualisations pertinentes expliquant la structure, les difficultés et le biais du jeu de données 
+    3. Accompagner le travail d'analyses statistiques de qualité
 
     Pour le rapport, préparer 1 notebook ou word/pdf contenant deux sous-parties:
         - Une partie rapport d'exploration des données dans lequel vous allez analyser et comprendre vos jeux de données 
