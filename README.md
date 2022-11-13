@@ -37,6 +37,8 @@ Cet ensemble de données contient environ 10 ans d'observations météorologique
     - interprétabilité du modèle de classification *"Logistic Regression"*
 - **[common_pyAusRainfall_RandomForest.ipynb](https://github.com/DataScientest-Studio/pyAusRainfall/blob/main/04_Model_Interpretability/common_pyAusRainfall_RandomForest.ipynb) :**
     - interprétabilité du modèle de classification *"Random Forest"*
+- **[common_pyAusRainfall_SupportVectorMachines.ipynb](https://github.com/DataScientest-Studio/pyAusRainfall/blob/main/04_Model_Interpretability/common_pyAusRainfall_SupportVectorMachines.ipynb) :**
+    - interprétabilité du modèle de classification *"Support Vector Machines"*
     
 **data/**
 - stockage des différents jeux de données utilisés
