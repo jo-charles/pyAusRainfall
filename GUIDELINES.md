@@ -136,6 +136,7 @@
             • "common_pyAusRainfall_time_series_by_location.ipynb"
             • "common_pyAusRainfall_temperature_forecasting.ipynb"
             • "common_pyAusRainfall_RandomForest.ipynb"
+        • Créer le notebook d'interprétation du modèle "SVM" avec Skater     
         • Rédiger le rapport final à partir du template fourni (parties attribuées)
     • Anne-Claire:
         • Rédiger le rapport final à partir du template fourni (parties attribuées)
