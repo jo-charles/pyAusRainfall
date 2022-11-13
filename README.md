@@ -32,7 +32,7 @@ Cet ensemble de données contient environ 10 ans d'observations météorologique
 - **[common_pyAusRainfall_DecisionTree.ipynb](https://github.com/DataScientest-Studio/pyAusRainfall/blob/main/04_Model_Interpretability/common_pyAusRainfall_DecisionTree.ipynb) :**
     - interprétabilité du modèle de classification *"Decision Tree"*
 - **[common_pyAusRainfall_KNearestNeighbors.ipynb](https://github.com/DataScientest-Studio/pyAusRainfall/blob/main/04_Model_Interpretability/common_pyAusRainfall_KNearestNeighbors.ipynb) :**
-    - interprétabilité du modèle de classification *"KNN"*
+    - interprétabilité du modèle de classification *"K-Nearest Neighbors"*
 - **[common_pyAusRainfall_LogisticRegression.ipynb](https://github.com/DataScientest-Studio/pyAusRainfall/blob/main/04_Model_Interpretability/common_pyAusRainfall_LogisticRegression.ipynb) :**
     - interprétabilité du modèle de classification *"Logistic Regression"*
 - **[common_pyAusRainfall_RandomForest.ipynb](https://github.com/DataScientest-Studio/pyAusRainfall/blob/main/04_Model_Interpretability/common_pyAusRainfall_RandomForest.ipynb) :**
