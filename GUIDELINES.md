@@ -82,7 +82,7 @@
         • Amélioration du modèle de prédiction à J+3, J+7
     • Anne-Claire: 
         • Rédaction du pré-rapport final
-        • Interprétabilité "Linear Regression"
+        • Interprétabilité "Logistic Regression"
     • Geneviève: 
         • Interprétabilité "Decision Tree"
         • Interprétabilité "Random Forest"
@@ -104,13 +104,38 @@
 
 ### Répartition du travail
     • Joseph: 
-        • Structurer le repository GitHub en dossiers organisés
-        • Exécuter le notebook "modelisation_with_resampling" de deux nouvelles manières:
-            • Intégrer l'argument "class_weight={0:2, 1:1}" lors de la définition des modèles
-            • Remplacer l'argument "scoring='accuracy'" par "scoring='f1-score'" dans l'appel de GridSearchCV()
-        • Communiquer sur les nouveaux résultats obtenus pour une prise en compte dans le rapport final
-        • Vérifier l'homogénéité des résultats sauvegardés avec ceux obtenus lors de l'exécution des modèles
-        • Reprendre la rédaction des notebooks "common_pyAusRainfall_RandomForest.ipynb" et "Prevision_temp.ipynb"
+        • Structurer le repository GitHub en dossiers organisés et mettre à jour le README avec des liens hypertextes
+        • Exécuter entièrement les notebooks "modelisation_with_resampling" et "modelisation_with_resampling" pour:
+            • intégrer l'argument "class_weight={0:2, 1:1}" lors de la définition de tous les modèles
+            • ajouter pour tous les modèles les graphiques scikit-plot suivants:
+                • la matrice de confusion normalisée
+                • la courbe de gain cumulée
+                • la courbe de précision-rappel
+                • la courbe ROC
+            • mettre à jour tous les résumés de performances et tous les fichiers de scores générés
+            • améliorer la flexibilité des rapports de performances en fonction du scoring et de la méthode de ré-échantillonage
+        • Exécuter entièrement le notebook "modelisation_with_resampling" pour:
+            • remplacer l'argument "scoring='accuracy'" par "scoring='f1-score'"
+            • mettre à jour le résumé de performances et les fichiers de scores générés
+        • Exécuter entièrement les notebooks d'interprétabilité pour:
+            • intégrer l'argument "class_weight={0:2, 1:1}" lors de la définition de tous les modèles
+            • intégrer les arguments "scoring='accuracy'" et "scoring='f1-score'"
+        • Communiquer sur les nouveaux résultats obtenus pour:
+            • statuer définitivement sur le modèle final retenu
+            • prendre en compte les nouveaux résultats dans le rapport final
+            • autoriser à nouveau les commits sur le main de GitHub, une fois ma branche incorporée
+        • Faire une repasse sur l'ensemble des notebooks pour: 
+            • vérifier la bonne exécution de la totalité des cellules
+            • vérifier la largeur du contenu de toutes les cellules pour que celles-ci soient lisibles sous GitHub
+            • regénérer l'ensemble des jeux de données pour s'assurer de leur fiabilité
+            • améliorer la rédaction des parties écrites en anglais et traduire si nécessaire
+            • enlever tous les appels des méthodes inutiles dans la récupération des librairies 
+            • nettoyer les codes et corriger les erreurs d'exécution (e.g. jeux de données non mis à jour, librairies manquantes) 
+        • Reprendre et proposer des améliorations/corrections sur les études suivantes:
+            • "common_pyAusRainfall_time_series_by_climate_type.ipynb"
+            • "common_pyAusRainfall_time_series_by_location.ipynb"
+            • "common_pyAusRainfall_temperature_forecasting.ipynb"
+            • "common_pyAusRainfall_RandomForest.ipynb"
         • Rédiger le rapport final à partir du template fourni (parties attribuées)
     • Anne-Claire:
         • Rédiger le rapport final à partir du template fourni (parties attribuées)

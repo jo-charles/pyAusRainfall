@@ -2,37 +2,41 @@
 
 ## Présentation du projet météo AVR22CDS
 Cet ensemble de données contient environ 10 ans d'observations météorologiques quotidiennes provenant de nombreux endroits en Australie. Il y a donc différentes visualisations intéressantes possibles.
-- Le premier objectif serait de prédire la variable cible **"RainTomorrow"**. Elle signifie : a-t-il plu le jour suivant, oui ou non ? Cette colonne est Oui si la pluie pour ce jour était de 1mm ou plus. De même pour des prédictions de vent ou température.
+- Le premier objectif serait de prédire la variable cible **"RainTomorrow"**. Elle signifie : a-t-il plu le jour suivant, oui ou non ? Cette colonne est "Oui" si la pluie pour ce jour était de 1mm ou plus. De même pour des prédictions de vent ou température.
 - Dans un second temps, on pourra effectuer des prédictions à long terme, en utilisant des techniques mathématiques d’analyse de séries temporelles, et/ou des réseaux de neurones récurrents.
 
 ## Contenu du projet météo AVR22CDS
 **01_Data_Visualization/**
 - **[common_pyAusRainfall_dataviz.ipynb](https://github.com/DataScientest-Studio/pyAusRainfall/blob/main/01_Data_Visualization/common_pyAusRainfall_dataviz.ipynb) :** 
-    - exploration, visualisation et analyse des données
+    - exploration, visualisation et analyse du jeu de données original
 
 **02_Data_Preprocessing/**
 - **[common_pyAusRainfall_features_selection.ipynb](https://github.com/DataScientest-Studio/pyAusRainfall/blob/main/02_Data_Preprocessing/common_pyAusRainfall_features_selection.ipynb) :** 
-    - étude standalone de sélection des variables
+    - étude standalone de sélection des variables quantitatives
 - **[common_pyAusRainfall_preprocessing.ipynb](https://github.com/DataScientest-Studio/pyAusRainfall/blob/main/02_Data_Preprocessing/common_pyAusRainfall_preprocessing.ipynb) :** 
-    - prétraitement des données
+    - prétraitement du jeu de données original
 
 **03_Data_Modeling/**
 - **[common_pyAusRainfall_modelisation_with_resampling.ipynb](https://github.com/DataScientest-Studio/pyAusRainfall/blob/main/03_Data_Modeling/common_pyAusRainfall_modelisation_with_resampling.ipynb) :**
-    - modélisations et scores associés avec méthode de sous-échantillonnage
+    - étude de prévision de précipitations à J+1 par l'analyse de modèles de classification avec méthode de sous-échantillonnage
 - **[common_pyAusRainfall_modelisation_without_resampling.ipynb](https://github.com/DataScientest-Studio/pyAusRainfall/blob/main/03_Data_Modeling/common_pyAusRainfall_modelisation_without_resampling.ipynb) :** 
-    - modélisations et scores associés sans méthode de sous-échantillonnage
-- **[pyAusRainfall_long-term_forecasting.ipynb](https://github.com/DataScientest-Studio/pyAusRainfall/blob/main/03_Data_Modeling/pyAusRainfall_long-term_forecasting.ipynb) :** 
-    - analyse temporelle de la pluviométrie à J+3 et J+7
-- **[pyAusRainfall_Time_series.ipynb](https://github.com/DataScientest-Studio/pyAusRainfall/blob/main/03_Data_Modeling/pyAusRainfall_Time_series.ipynb) :** 
-    - analyse temporelle générale de la pluviométrie
-    
+    - étude de prévision de précipitations à J+1 par l'analyse de modèles de classification sans méthode de sous-échantillonnage
+- **[common_pyAusRainfall_temperature_forecasting.ipynb](https://github.com/DataScientest-Studio/pyAusRainfall/blob/main/03_Data_Modeling/common_pyAusRainfall_temperature_forecasting.ipynb) :** 
+    - étude standalone de prévision des températures par l'analyse du modèle de régression *"Gradient Boosting"*
+- **[common_pyAusRainfall_time_series_by_climate_type.ipynb](https://github.com/DataScientest-Studio/pyAusRainfall/blob/main/03_Data_Modeling/common_pyAusRainfall_time_series_by_climate_type.ipynb) :** 
+    - analyse temporelle générale de la pluviométrie en fonction du type de climat
+- **[common_pyAusRainfall_time_series_by_location.ipynb](https://github.com/DataScientest-Studio/pyAusRainfall/blob/main/03_Data_Modeling/common_pyAusRainfall_time_series_by_location.ipynb) :** 
+    - analyse temporelle de la pluviométrie à J+1, J+3 et J+7 en fonction d'une ville
+
 **04_Model_Interpretability/**
 - **[common_pyAusRainfall_DecisionTree.ipynb](https://github.com/DataScientest-Studio/pyAusRainfall/blob/main/04_Model_Interpretability/common_pyAusRainfall_DecisionTree.ipynb) :**
-    - interprétabilité du modèle Decision Tree
-- **[common_pyAusRainfall_Logistic_Regression.ipynb](https://github.com/DataScientest-Studio/pyAusRainfall/blob/main/04_Model_Interpretability/common_pyAusRainfall_Logistic_Regression.ipynb) :**
-    - interprétabilité du modèle Logistic Regression
-- **[common_pyAusRainfall_knn.ipynb](https://github.com/DataScientest-Studio/pyAusRainfall/blob/main/04_Model_Interpretability/common_pyAusRainfall_knn.ipynb) :**
-    - interprétabilité du modèle KNN
+    - interprétabilité du modèle de classification *"Decision Tree"*
+- **[common_pyAusRainfall_KNN.ipynb](https://github.com/DataScientest-Studio/pyAusRainfall/blob/main/04_Model_Interpretability/common_pyAusRainfall_KNN.ipynb) :**
+    - interprétabilité du modèle de classification *"KNN"*
+- **[common_pyAusRainfall_LogisticRegression.ipynb](https://github.com/DataScientest-Studio/pyAusRainfall/blob/main/04_Model_Interpretability/common_pyAusRainfall_LogisticRegression.ipynb) :**
+    - interprétabilité du modèle de classification *"Logistic Regression"*
+- **[common_pyAusRainfall_RandomForest.ipynb](https://github.com/DataScientest-Studio/pyAusRainfall/blob/main/04_Model_Interpretability/common_pyAusRainfall_RandomForest.ipynb) :**
+    - interprétabilité du modèle de classification *"Random Forest"*
     
 **data/**
 - stockage des différents jeux de données utilisés
@@ -44,7 +48,7 @@ Cet ensemble de données contient environ 10 ans d'observations météorologique
 - stockage des scores obtenus par les différents modèles en format "*.csv"
     
 **[GUIDELINES](https://github.com/DataScientest-Studio/pyAusRainfall/blob/main/GUIDELINES.md) :**
-- consignes, répartition du travail et échéances des différentes itérations
+- consignes, répartition du travail et échéances des différentes itérations du projet
     
 **[NOTES](https://github.com/DataScientest-Studio/pyAusRainfall/blob/main/NOTES.md) :**
 - définition des variables, cadre méthodologique et suggestions d'améliorations  
