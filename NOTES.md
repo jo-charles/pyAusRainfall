@@ -49,26 +49,12 @@
     - DecisionTreeClassifier()
     - RandomForestClassifier()
     - LinearSVC()
-- utilisation des méthodes de Deep Learning avec **Keras** 
+- utilisation de réseaux de neurones récurrents par des méthodes de Deep Learning avec **Keras** 
     
 ## SCORES (TEMPORAIRE: A EFFACER)
 ### Résultats originaux
-- SVM : accuracy = 0.838, f1-score = 0.64
-- KNN : accuracy = 0.792, f1-score = 0.62
 - LR : accuracy = 0.779, f1-score = 0.60
 - RF : accuracy = 0.794, f1-score = 0.63
+- SVM : accuracy = 0.838, f1-score = 0.64
+- KNN : accuracy = 0.792, f1-score = 0.62
 - DT : accuracy = 0.773, f1-score = 0.59
-
-### Résultats obtenus avec l'argument "class_weight={0:2, 1:1}" lors de la définition des modèles
-- SVM : accuracy = , f1-score = 
-- KNN : accuracy = , f1-score = 
-- LR : accuracy = , f1-score = 
-- RF : accuracy = , f1-score = 
-- DT : accuracy = , f1-score = 
-
-### Résultats obtenus en remplaçant l'argument "scoring='accuracy'" par "scoring='f1-score'" dans l'appel de GridSearchCV
-- SVM : accuracy = , f1-score = 
-- KNN : accuracy = , f1-score = 
-- LR : accuracy = , f1-score = 
-- RF : accuracy = , f1-score = 
-- DT : accuracy = , f1-score = 
