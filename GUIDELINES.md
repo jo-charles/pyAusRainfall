@@ -39,7 +39,7 @@ Cet ensemble de données contient environ 10 ans d'observations météorologique
         • Influence des vents sur la pluie
         • Distribution des températures au cours de l’année suivant le climat
         • etc.
-    3. Prévoir une session pour mettre en commun, nettoyer les codes et rédiger le rapport.
+    3. Prévoir une session pour mettre en commun, nettoyer les codes et rédiger le rapport
 
 **Deadline:** Dimanche 3 juillet 2022
 
