@@ -1,11 +1,15 @@
-# pyAusRainfall : Prévisions météorologiques en Australie
+# pyAusRainfall / AVR22CDS : Prévisions météorologiques en Australie
 
-## Présentation du projet météo AVR22CDS
-Cet ensemble de données contient environ 10 ans d'observations météorologiques quotidiennes provenant de nombreux endroits en Australie. Il y a donc différentes visualisations intéressantes possibles.
-- Le premier objectif serait de prédire la variable cible **"RainTomorrow"**. Elle signifie : a-t-il plu le jour suivant, oui ou non ? Cette colonne est "Oui" si la pluie pour ce jour était de 1mm ou plus. De même pour des prédictions de vent ou température.
-- Dans un second temps, on pourra effectuer des prédictions à long terme, en utilisant des techniques mathématiques d’analyse de séries temporelles, et/ou des réseaux de neurones récurrents.
+## Présentation du projet
+Ce projet considère une série temporelle couvrant une période d'environ 10 ans d'observations météorologiques quotidiennes en Australie et propose différentes techniques d'analyse, de modélisation et de prévision de valeurs futures. L'objectif principal consiste à prédire les précipitations au lendemain d'une observation à l'aide de la variable cible "RainTomorrow". Une étude de prévisions des températures au lendemain d'une observation est également réalisée ainsi que des prévisions à plus long terme par une évaluation de modèles de séries temporelles.
 
-## Contenu du projet météo AVR22CDS
+Ce projet s'articule autour de quatre axes:
+1. l'exploration, la visualisation et l'analyse des données,
+1. la préparation du jeu de données,
+1. la modélisation (modèles de classification par apprentissage supervisé et modèles de séries temporelles),
+1. l'interprétabilité des modèles de classification étudiés.
+
+## Contenu du GitHub
 **01_Data_Visualization/**
 - **[common_pyAusRainfall_dataviz.ipynb](https://github.com/DataScientest-Studio/pyAusRainfall/blob/main/01_Data_Visualization/common_pyAusRainfall_dataviz.ipynb) :** 
     - exploration, visualisation et analyse du jeu de données original
@@ -14,7 +18,7 @@ Cet ensemble de données contient environ 10 ans d'observations météorologique
 - **[common_pyAusRainfall_features_selection.ipynb](https://github.com/DataScientest-Studio/pyAusRainfall/blob/main/02_Data_Preprocessing/common_pyAusRainfall_features_selection.ipynb) :** 
     - étude standalone de sélection des variables quantitatives
 - **[common_pyAusRainfall_preprocessing.ipynb](https://github.com/DataScientest-Studio/pyAusRainfall/blob/main/02_Data_Preprocessing/common_pyAusRainfall_preprocessing.ipynb) :** 
-    - prétraitement du jeu de données original
+    - préparation du jeu de données
 
 **03_Data_Modeling/**
 - **[common_pyAusRainfall_modelisation_with_resampling.ipynb](https://github.com/DataScientest-Studio/pyAusRainfall/blob/main/03_Data_Modeling/common_pyAusRainfall_modelisation_with_resampling.ipynb) :**
@@ -57,6 +61,8 @@ Cet ensemble de données contient environ 10 ans d'observations météorologique
     
 ## Source des données
 https://www.kaggle.com/jsphyg/weather-dataset-rattle-package
+
+Le jeu de données étudié contient environ 10 ans d'observations météorologiques quotidiennes provenant de nombreux endroits en Australie, caractérisées par 23 variables explicatives météorologiques telles que la pression, la température, l'humidité, l'ensoleillement etc.
 
 - Les observations proviennent de nombreuses stations météorologiques. Les observations quotidiennes sont disponibles sur http://www.bom.gov.au/climate/data
 - Un exemple des dernières observations météorologiques à Canberra: http://www.bom.gov.au/climate/dwo/IDCJDW2801.latest.shtml

@@ -43,6 +43,7 @@
     - 'RainTomorrow'
 
 ## Suggestions d'améliorations
+- réalisation d'une étude plus approfondie autour de l'influence du paramètre "class_weight" sur les performances des modèles utilisés
 - utilisation des variables catégorielles qui ont été ignorées dans le cadre de cette étude
 - utilisation de **Spark ML** afin d'optimiser les performances des algorithmes de classification tels que:
     - LogisticRegression() 
