@@ -51,5 +51,5 @@
 > - utilisation de méthodes générant des sous-ensembles sous-échantillonnés, comme le Boosting ou le Bagging
 > - utilisation d'autres méthodes de machine learning, comme l’Anomaly Detection ou l’Active Learning
 > - utilisation de réseaux de neurones récurrents par des méthodes de Deep Learning avec "Keras"
-> - utilisation de "Spark ML" afin d'optimiser les performances des algorithmes de classification tels que LogisticRegression(), DecisionTreeClassifier(), RandomForestClassifier(), LinearSVC()
+> - utilisation de "Spark ML" afin d'optimiser les performances des algorithmes de classification tels que "Logistic Regression", "Decision Tree", "Random Forest" et "SVM"
 

@@ -1,13 +1,25 @@
 # pyAusRainfall / AVR22CDS : Prévisions météorologiques en Australie
 
 ## Présentation du projet
-Ce projet se concentre sur l'examen d'une série chronologique d'observations météorologiques quotidiennes australiennes sur environ 10 ans et offre une gamme de techniques d'analyse, de modélisation et de prévision. L'objectif principal est de prédire les précipitations du jour suivant l'observation à l'aide de la variable cible "RainTomorrow". Une étude des prévisions de température pour le lendemain de l'observation et des prévisions à plus long terme sont également réalisées en évaluant des modèles de séries chronologiques.
+Ce projet porte sur l'étude d'une série chronologique regroupant environ 10 périodes d'observations météorologiques quotidiennes en Australie et couvre une gamme de techniques d'analyse, de modélisation et de prévision.
 
-Cette étude s'articule autour de quatre axes:
+L'objectif principal est de prédire les précipitations du jour suivant l'observation à l'aide de la variable cible `"RainTomorrow"`. Une étude des prévisions de température pour le lendemain de l'observation et des prévisions à plus long terme sont également réalisées en évaluant des modèles de séries chronologiques.
+
+Cette étude s'articule autour des étapes les plus importantes du processus décisonnel de la science des données:
 >1. l'exploration, la visualisation et l'analyse des données,
 >1. la préparation du jeu de données,
->1. la modélisation (modèles de classification binaire avec apprentissage supervisé et modèles de séries temporelles multivariées),
->1. l'interprétabilité des modèles de classification étudiés.
+>1. l’élaboration et l’évaluation de modèles prédictifs,
+>1. l'interprétabilité des modèles de classification étudiés,
+>1. le déploiement du modèle retenu via une interface graphique.
+
+Pour l’élaboration des modèles prédictifs, nous avons eu recours à:
+>- des modèles de classification binaire avec apprentissage supervisé de type:
+>    - régression logistique (“Logistic Regression”),
+>    - forêts aléatoires (“Random Forest”),
+>    - séparateurs à vaste marge (“Support Vector Machine”),
+>    - K-plus proches voisins (“K-Nearest Neighbors”),
+>    - arbres de décision (“Decision Tree”),
+>- des modèles de séries temporelles multivariées.
 
 ## Contenu du GitHub
 **01_Data_Visualization/**
@@ -51,7 +63,7 @@ Cette étude s'articule autour de quatre axes:
 > contenu obsolète
 
 **score/**
-> stockage des scores obtenus par les différents modèles en format "*.csv"
+> stockage des scores obtenus par les différents modèles
     
 **[GUIDELINES](https://github.com/DataScientest-Studio/pyAusRainfall/blob/main/GUIDELINES.md) :**
 > consignes, répartition du travail et échéances des différentes itérations du projet
