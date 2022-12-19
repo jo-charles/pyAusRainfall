@@ -82,7 +82,7 @@ Le jeu de données étudié contient environ 10 ans d'observations météorologi
 - Source des données: http://www.bom.gov.au/climate/dwo/ et http://www.bom.gov.au/climate/data
 
 ## Rapport technique
-> **[Rapport Technique d’évaluation](https://docs.google.com/document/d/1S6TrWBeBhRvBYoifv7e_KQCzcM46asP6mtodZ3nJNcE)**
+> **[Rapport Technique d’évaluation](Rapport_PyAusRainfall_AVR22CDF.pdf)**
 
 ## Conditions de validation du projet
 - Exploration des données (vision d’ensemble sur les données)
