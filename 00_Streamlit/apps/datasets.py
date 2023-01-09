@@ -1,8 +1,6 @@
 import streamlit as st
 
-
 def app():
-
     st.title("Le dataset")
     st.header("Cadre")
     st.subheader("Quel(s) jeu(x) de donnée(s) avez vous utilisé pour atteindre les objectifs de votre projet ?")    

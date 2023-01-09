@@ -1,9 +1,7 @@
 import streamlit as st
 
-
 def app():
     st.title("pyAusRainfall")
-
     st.header("Prévisions météorologiques en Australie")
     st.markdown(
         """

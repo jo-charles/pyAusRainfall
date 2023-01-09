@@ -2,7 +2,6 @@ import streamlit as st
 from PIL import Image
 
 def app():
-
     st.title("Modélisation")
     st.header("Choix du modèle & Optimisation")
     st.write("""Nous avons essayé 5 modèles de machine learning durant la durée du projet: 
@@ -17,4 +16,5 @@ Les meilleures performances obtenues correspondent aux modélisations des prévi
     st.subheader("Resultats")
     st.write("\n\n")  
     img = Image.open("images/results.png")
-    st.image(img, width = 600, caption = "")             
+    st.image(img, width = 600, caption = "")
+    

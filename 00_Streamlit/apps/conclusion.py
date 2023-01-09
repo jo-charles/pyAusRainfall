@@ -1,10 +1,10 @@
 import streamlit as st
 
-
 def app():
     st.title("Conclusion & Perspectives")
     st.header("Bilan")
-    st.write("""En quoi votre projet a-t-il contribué à un accroissement de connaissance scientifique ?
+    st.write("""
+    En quoi votre projet a-t-il contribué à un accroissement de connaissance scientifique ?
 
 De manière générale, ce projet a permis à chacun de prendre en main certains outils dédiés à l’analyse, un langage de programmation et des méthodes applicables aux problèmes de données. La manipulation des algorithmes étudiés est complexe et cela a nécessité d’aller continuellement se documenter pour approfondir les connaissances acquises au cours de cette formation.
 

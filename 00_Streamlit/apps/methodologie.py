@@ -1,8 +1,6 @@
 import streamlit as st
 
-
 def app():
-
     st.title("Méthodologie")
     st.header("Classification du problème")
     st.write("\n\n")  
