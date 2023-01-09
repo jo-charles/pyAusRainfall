@@ -1,7 +1,7 @@
 import streamlit as st
 
 def app():
-    st.title("Conclusion & Perspectives")
+    st.title("Conclusion")
     st.header("Bilan")
     st.write("""
     En quoi votre projet a-t-il contribué à un accroissement de connaissance scientifique ?
@@ -27,4 +27,4 @@ Interprétabilité des modèles de classification étudiés
 Pour chacun des modèles étudiés, nous avons proposé une approche d’interprétabilité en recourant à différentes techniques et visualisations qui viennent conforter le constat de départ sur l’importance relative des variables explicatives par rapport à notre variable cible. Cette étude nous apporte des informations complémentaires à celles obtenues lors de la phase de modélisation et qui nous aide à nous prononcer sur le choix d’un modèle final retenu.
 """
         )
-   
+    st.title("Perspectives")

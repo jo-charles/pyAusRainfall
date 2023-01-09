@@ -1,11 +1,10 @@
 import streamlit as st
 
 def app():
-    st.title("Le dataset")
-    st.header("Cadre")
-    st.subheader("Quel(s) jeu(x) de donnée(s) avez vous utilisé pour atteindre les objectifs de votre projet ?")    
-    st.write(
-    """
+    st.title("Prétraitement des données")
+    st.header("Titre")
+    st.subheader("Variables du jeu de données")  
+    st.write("""
     - Date : Date d'observation.
     - Location : Ville où se situe la station météorologique.
     - MinTemp : Température minimale en degrés Celsius.
@@ -28,5 +27,11 @@ def app():
     - Temp9am : Température en degrés Celsius à 9h du matin.
     - Temp3pm : Température en degrés Celsius à 3h de l'après-midi.
     - RainToday : vaut 1 si les précipitations (en mm) dans les 24 heures avant 9h sont supérieur à 1 mm, 0 sinon.
-    - RainTomorrow : vaut 1 si les précipitations (en mm) du lendemain sont supérieur à 1 mm, 0 sinon""")              
+    - RainTomorrow : vaut 1 si les précipitations (en mm) du lendemain sont supérieur à 1 mm, 0 sinon
+    """)              
              
+    st.warning("""
+    Dans un premier temps, nous avons supprimé les valeurs manquantes des variables RainTomorrow et RainToday. Nous avons ensuite encodé ses variables pour que la valeur “Non” soit remplacée par 0 et la valeur “Oui” soit remplacée par 1.
+Nous avons utilisé la méthode KNN-Imputer() pour les variables numériques présentant la plus forte proportion de valeurs manquantes (Sunshine, Evaporation, Cloud3pm, Cloud9am). Concernant les variables quantitatives restantes, l’utilisation de l’interpolation avec la méthode ‘time’, nous a permis de remplacer les valeurs manquantes. Pour finir, les valeurs manquantes des trois variables qualitatives WindGustDir, WindDir9am, WindDir3pm ont été respectivement remplacées par le mode.
+Deux variables ont été créées; Temp_Delta_MinMax qui est la différence entre MaxTemp et MinTemp et Humidity_Delta qui est la différence entre les variables d’humidité.
+""")

@@ -1,18 +1,17 @@
 import streamlit as st
 from multiapp import MultiApp
-from apps import projet, analyse, modelisation, datasets, methodologie, prediction, conclusion
+from apps import introduction, pretraitement, visualisation, modelisation, demonstration, conclusion
 
 st.set_page_config(layout="wide")
 
 apps = MultiApp()
 
 # Add all your application here
-apps.add_app("Projet", projet.app)
-apps.add_app("Dataset", datasets.app)
-apps.add_app("Analyse", analyse.app)
-apps.add_app("Méthodologie", methodologie.app)
+apps.add_app("Introduction", introduction.app)
+apps.add_app("Prétraitement", pretraitement.app)
+apps.add_app("Visualisation", visualisation.app)
 apps.add_app("Modélisation", modelisation.app)
-apps.add_app("Prédiction", prediction.app)
+apps.add_app("Démonstration", demonstration.app)
 apps.add_app("Conclusion", conclusion.app)
 
 # The main app

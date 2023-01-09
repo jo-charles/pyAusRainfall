@@ -1,8 +1,9 @@
 import streamlit as st
 
 def app():
-    st.title("pyAusRainfall")
-    st.header("Prévisions météorologiques en Australie")
+    st.title("Introduction")
+    st.header("Contexte et explication des objectifs du projet")
+    st.subheader("Prévisions météorologiques en Australie")
     st.markdown(
         """
 Cet ensemble de données contient environ 10 ans d'observations météorologiques quotidiennes provenant de nombreux endroits en Australie. Il y a donc différentes visualisations intéressantes possibles.

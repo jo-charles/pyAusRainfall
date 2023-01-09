@@ -173,15 +173,14 @@ Cet ensemble de données contient environ 10 ans d'observations météorologique
     6. Ajouter une partie conclusion et perspectives d’ouverture
 
 ### Répartition du travail
-    • Joseph: 
-
-    • Anne-Claire:
-    
-    • Geneviève:
-    
-    • Olivier:
-        • Initialisation du Streamlit
+    • Introduction:  1 minutes (Olivier)
+    • Prétraitement: 2 minutes (Olivier)
+    • Visualisation: 5 minutes (Anne Claire)
+    • Modélisation: 5 minutes (Joseph)
+    • Démonstration: 5 minutes (Geneviève)
+    • Conclusion: 2 minutes (Olivier)
 
 **Synchro (interne):** Lundi 09 janvier 2023 à 17h00 \
 **Synchro:** Lundi 16 janvier 2023 à 16h00 \
-**Deadline:** Jeudi 26 janvier 2022
+**Deadline:** Jeudi 26 janvier 2022 \
+**Presentation:** Lundi 30 janvier à 17H30
