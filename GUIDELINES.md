@@ -159,3 +159,29 @@ Cet ensemble de données contient environ 10 ans d'observations météorologique
 **Envoi du rapport:** Lundi 05 décembre 2022 (retour en asynchrone le Mercredi 7 décembre 2022) \
 **Deadline du rapport:** Jeudi 15 décembre 2022 \
 **Deadline:** Lundi 19 décembre 2022 à 17h00
+
+## Consignes de l'itération 6 : "Streamlit"
+    1. Introduction: Contexte et explication des objectifs du projet
+    2. Exploration et preprocessing
+    3. DataViz: Ajouter les commentaires: hypothèse + Viz + conclusion
+    4. Choix des modèles → Modélisation
+        • formuler le problème de Machine Learning
+        • Présenter les modèles qui n’ont pas marché (viz comparative des performances)
+    5. Démonstration
+        • Démonstration sur les meilleurs modèles
+        • Analyse
+    6. Ajouter une partie conclusion et perspectives d’ouverture
+
+### Répartition du travail
+    • Joseph: 
+
+    • Anne-Claire:
+    
+    • Geneviève:
+    
+    • Olivier:
+        • Initialisation du Streamlit
+
+**Synchro (interne):** Lundi 09 janvier 2023 à 17h00 \
+**Synchro:** Lundi 16 janvier 2023 à 16h00 \
+**Deadline:** Jeudi 26 janvier 2022
