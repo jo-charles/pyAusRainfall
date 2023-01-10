@@ -24,7 +24,7 @@ with st.sidebar:
     Réalisé par :
     - Anne-Claire OGIERAIKHI
     - Joseph CHARLES ([Linkedin](https://fr.linkedin.com/in/josephcharles1))
-    - Olivier AMABLE
+    - Olivier AMABLE ([Linkedin](https://www.linkedin.com/in/olivier-amable))
     - Geneviève STEELE
     
     Encadré par : 
