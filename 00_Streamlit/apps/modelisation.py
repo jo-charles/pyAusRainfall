@@ -4,8 +4,8 @@ from PIL import Image
 def app():
     st.title("Modélisation des données")
     st.header("Modélisation")
-    st.write(
-    """Ce projet propose de résoudre un problème de classification binaire avec apprentissage supervisé, car il s'agit de prédire une variable quantitative cible à l'aide d'un ensemble de données étiquetées. Avec des entrées et des sorties étiquetées, le modèle peut mesurer sa précision et apprendre au fil du temps.
+    st.markdown("""
+    Ce projet propose de résoudre un problème de classification binaire avec apprentissage supervisé, car il s'agit de prédire une variable quantitative cible à l'aide d'un ensemble de données étiquetées. Avec des entrées et des sorties étiquetées, le modèle peut mesurer sa précision et apprendre au fil du temps.
     Pour l’élaboration de modèles prédictifs, nous avons eu recours à:
         - des modèles de classification binaire avec apprentissage supervisé de type:
             - régression logistique (“Logistic Regression”)
@@ -14,10 +14,10 @@ def app():
             - K-plus proches voisins (“K-Nearest Neighbors”)
             - arbres de décision (“Decision Tree”)
         - des modèles de séries temporelles multivariées
-            """)
+        """)
     
     st.header("Choix du modèle & Optimisation")
-    st.write("""Nous avons essayé 5 modèles de machine learning durant la durée du projet: 
+    st.markdown("""Nous avons essayé 5 modèles de machine learning durant la durée du projet: 
     - Régression Linéaire (lr),
     - Arbres de Décision (dt),
     - K-plus proches voisins (knn), 

@@ -18,13 +18,13 @@ apps.add_app("Conclusion", conclusion.app)
 apps.run()
 
 with st.sidebar:
-    st.write("""
+    st.markdown("""
     **Promotion DS Continu - Avril 2022**
 
     Réalisé par :
     - Anne-Claire OGIERAIKHI
     - Joseph CHARLES ([Linkedin](https://fr.linkedin.com/in/josephcharles1))
-    - Olivier AMABLE ([Linkedin](https://www.linkedin.com/in/olivier-amable))
+    - Olivier AMABLE ([Linkedin](https://fr.linkedin.com/in/olivier-amable))
     - Geneviève STEELE
     
     Encadré par : 
