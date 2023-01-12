@@ -6,17 +6,22 @@ import io
 
 from PIL import Image
 
-# Choix des modèles → Modélisation
-# formuler le pb de ML
-# Présenter les modèles qui n’ont pas marché (viz comparative des performances)
-
-# agree = st.checkbox('I agree')
-# if agree:
-#    st.write('Great!')
-
-# st.success('This is a success message!', icon="✅")
+# PLAN
+# ✅ Modélisation
+# ✅ Formulation du problème de Machine Learning
+# ❌ Evaluation des modèles prédictifs (visualisation comparative des performances)
+# ❌ Choix du meilleur modèle
 
 def app():
+    st.title("Modélisation des données")
+    st.header("Formulation du problème de Machine Learning")
+    st.subheader("Classification binaire par apprentissage supervisé")
+    st.markdown("""
+Ce projet vise à résoudre un problème de classification binaire en utilisant des techniques d'apprentissage supervisé. Il s'agit de prévoir la valeur d'une variable cible quantitative en utilisant des données étiquetées qui comprennent des entrées et des sorties. Grâce à ces étiquettes, le modèle peut évaluer son exactitude et continuer à s'améliorer au fil du temps. En utilisant des techniques d'apprentissage supervisé, le modèle est capable de généraliser à de nouvelles données, en s'appuyant sur les connaissances acquises lors de l'entraînement.
+
+Pour l’élaboration de modèles prédictifs, nous avons utilisé différents modèles de classification binaire, tels que la régression logistique, les forêts aléatoires, les séparateurs à vaste marge, les K-plus proches voisins, et les arbres de décision. Ces modèles utilisent des algorithmes différents pour la prédiction de la variable cible, et nous les avons comparés pour déterminer le meilleur modèle pour résoudre notre problème de classification binaire.
+""")
+    
     models = ["Régression logistique (Logistic Regression)", 
           "Forêts aléatoires (Random Forest)", 
           "Séparateurs à vaste marge (Support Vector Machine)", 
@@ -25,41 +30,35 @@ def app():
 
     model_descriptions = {
         "Régression logistique (Logistic Regression)": 
-        "La régression logistique est un modèle statistique utilisé pour résoudre les problèmes de classification binaire. Il permet de prédire une probabilité de pertinence pour chaque classe en utilisant une fonction logistique. Ce modèle est souvent utilisé dans les contextes de classification de données binaires telles que la détection de spam ou la prédiction de l'échec d'un crédit. Cependant, il est moins interprétable que d'autres modèles tels que les arbres de décision car il ne donne pas une idée claire des caractéristiques qui ont conduit à la prédiction.",
+        "La **régression logistique** est un modèle statistique utilisé pour résoudre les problèmes de classification binaire. Il permet de prédire une probabilité de pertinence pour chaque classe en utilisant une fonction logistique. Ce modèle est souvent utilisé dans les contextes de classification de données binaires telles que la détection de spam ou la prédiction de l'échec d'un crédit. Cependant, il est moins interprétable que d'autres modèles tels que les arbres de décision car il ne donne pas une idée claire des caractéristiques qui ont conduit à la prédiction.",
         "Forêts aléatoires (Random Forest)":
-        "Les forêts aléatoires sont un ensemble d'arbres de décision formant un ensemble d'apprentissage supervisé. Il permet de maximiser les chances de prédire correctement la variable cible, car il s’appuie sur l’ensemble des prédictions des différents arbres pour faire une prédiction. Ces modèles sont souvent utilisés pour les problèmes de classification multi-classes ou de régression. Ils offrent également la possibilité de mesurer l'importance relative des variables, permettant une meilleure interprétabilité des résultats.",
+        "Les **forêts aléatoires** sont un ensemble d'arbres de décision formant un ensemble d'apprentissage supervisé. Il permet de maximiser les chances de prédire correctement la variable cible, car il s’appuie sur l’ensemble des prédictions des différents arbres pour faire une prédiction. Ces modèles sont souvent utilisés pour les problèmes de classification multi-classes ou de régression. Ils offrent également la possibilité de mesurer l'importance relative des variables, permettant une meilleure interprétabilité des résultats.",
         "Séparateurs à vaste marge (Support Vector Machine)":
-        "Les séparateurs à vaste marge sont un modèle de classification supervisée utilisant des fonctions de noyau pour séparer les données dans l'espace de caractéristiques. Ils sont souvent utilisés pour les jeux de données non linéaires ou pour des problèmes de classification multi-classes. Cependant, ils peuvent être sensibles aux données bruyantes et ont des difficultés à gérer les données très déséquilibrées",
+        "Les **séparateurs à vaste marge** sont un modèle de classification supervisée utilisant des fonctions de noyau pour séparer les données dans l'espace de caractéristiques. Ils sont souvent utilisés pour les jeux de données non linéaires ou pour des problèmes de classification multi-classes. Cependant, ils peuvent être sensibles aux données bruyantes et ont des difficultés à gérer les données très déséquilibrées",
         "K-plus proches voisins (K-Nearest Neighbors)":
-        "Le modèle des K-plus proches voisins est un modèle de classification supervisée qui utilise la distance euclidienne pour classer les nouvelles observations en fonction de leurs K plus proches voisins dans l'ensemble d'apprentissage. Il est souvent utilisé pour la classification de données à des fins de reconnaissance d'images ou de reconnaissance vocale. Il est facile à comprendre et à implémenter mais peut être lent pour des jeux de données volumineux.",
+        "Le modèle des **K-plus proches voisins** est un modèle de classification supervisée qui utilise la distance euclidienne pour classer les nouvelles observations en fonction de leurs K plus proches voisins dans l'ensemble d'apprentissage. Il est souvent utilisé pour la classification de données à des fins de reconnaissance d'images ou de reconnaissance vocale. Il est facile à comprendre et à implémenter mais peut être lent pour des jeux de données volumineux.",
         "Arbres de décision (Decision Tree)":
-        "Les arbres de décision sont des modèles de classification et de régression utilisés pour résoudre des problèmes de machine learning supervisés. Ils sont basés sur une structure hiérarchique de questions (nœuds) et de réponses (feuilles) qui permettent de faire des prédictions à partir d'une variable cible. Les arbres de décision sont souvent utilisés pour résoudre des problèmes de classification binaire et multi-classes, ainsi que pour l'analyse de données de type régression. Les arbres de décision sont souvent très interprétables car ils permettent de visualiser les règles de décision prises par le modèle. Cependant, ils peuvent être sujets à surapprentissage lorsque la complexité du modèle est trop élevée."
+        "Les **arbres de décision** sont des modèles de classification et de régression utilisés pour résoudre des problèmes de machine learning supervisés. Ils sont basés sur une structure hiérarchique de questions (nœuds) et de réponses (feuilles) qui permettent de faire des prédictions à partir d'une variable cible. Les arbres de décision sont souvent utilisés pour résoudre des problèmes de classification binaire et multi-classes, ainsi que pour l'analyse de données de type régression. Les arbres de décision sont souvent très interprétables car ils permettent de visualiser les règles de décision prises par le modèle. Cependant, ils peuvent être sujets à surapprentissage lorsque la complexité du modèle est trop élevée."
     }
-    
+      
+    model_selected = st.radio("", models, label_visibility="collapsed")
+    st.write(":information_source:", model_descriptions[model_selected])
+ 
+    st.markdown("""
+---
+Le jeu de données utilisé dans ce projet est une série temporelle multivariée, c'est-à-dire qu'il regroupe l'évolution temporelle de plusieurs variables explicatives. Cela permet la détection de corrélations entre ces variables au fil du temps. Pour gérer ce type de données, nous avons considéré différents modèles de séries temporelles multivariées. Ces modèles incluent des techniques de décomposition de séries temporelles pour isoler les tendances, les saisons et les résidus des séries.
+""")
+
     ts_models = ["ARIMA (Auto-Regressive Integrated Moving Average)", 
          "SARIMA (Seasonal Auto-Regressive Integrated Moving Average)"]
 
     ts_model_descriptions = {
         "ARIMA (Auto-Regressive Integrated Moving Average)": 
-        "Le modèle ARIMA (Auto-Regressive Integrated Moving Average) est un modèle statistique utilisé pour l'analyse et la prévision des séries chronologiques. Il combine des modèles d'autorégression (AR), de différenciation (I) et de moyenne mobile (MA) pour comprendre les tendances et saisonnalités dans les données. Il est souvent utilisé pour prévoir des événements tels que les ventes, les émissions de gaz à effet de serre, la consommation énergétique, etc.",
+        "Le modèle **ARIMA** (Auto-Regressive Integrated Moving Average) est un modèle statistique utilisé pour l'analyse et la prévision des séries chronologiques. Il combine des modèles d'autorégression (AR), de différenciation (I) et de moyenne mobile (MA) pour comprendre les tendances et saisonnalités dans les données. Il est souvent utilisé pour prévoir des événements tels que les ventes, les émissions de gaz à effet de serre, la consommation énergétique, etc.",
         "SARIMA (Seasonal Auto-Regressive Integrated Moving Average)":
-        "Le modèle SARIMA (Seasonal Auto-Regressive Integrated Moving Average) est une extension de l'ARIMA qui prend en compte les tendances saisonnières dans les données. Il est utilisé pour les séries chronologiques avec des tendances saisonnières, comme les données de vente au détail, de tourisme, de météo, etc. C'est un outil efficace pour la détection des tendances saisonnières et l'analyse des tendances de fond dans les données."
+        "Le modèle **SARIMA** (Seasonal Auto-Regressive Integrated Moving Average) est une extension de l'ARIMA qui prend en compte les tendances saisonnières dans les données. Il est utilisé pour les séries chronologiques avec des tendances saisonnières, comme les données de vente au détail, de tourisme, de météo, etc. C'est un outil efficace pour la détection des tendances saisonnières et l'analyse des tendances de fond dans les données."
     }
     
-    st.title("Modélisation des données")
-    st.header("Type de problème de machine learning")
-    st.subheader("Classification binaire par apprentissage supervisé")
-    st.markdown("""
-Ce projet vise à résoudre un défi de classification binaire en utilisant des techniques d'apprentissage supervisé. Il s'agit de prévoir la valeur d'une variable cible quantitative en utilisant des données étiquetées qui comprennent des entrées et des sorties. Grâce à ces étiquettes, le modèle peut évaluer son exactitude et continuer à s'améliorer au fil du temps. En utilisant des techniques d'apprentissage supervisé, le modèle est capable de généraliser à de nouvelles données, en s'appuyant sur les connaissances acquises lors de l'entraînement.
-
-Pour l’élaboration de modèles prédictifs, nous avons utilisé différents modèles de classification binaire, tels que la régression logistique, les forêts aléatoires, les séparateurs à vaste marge, les K-plus proches voisins, et les arbres de décision. Ces modèles utilisent des algorithmes différents pour la prédiction de la variable cible, et nous les avons comparés pour déterminer le meilleur modèle pour résoudre notre problème de classification binaire.
-""")
-    model_selected = st.radio("", models, label_visibility="collapsed")
-    st.write(":information_source:", model_descriptions[model_selected])
- 
-    st.markdown("""
-Le jeu de données utilisé dans ce projet est une série temporelle multivariée, c'est-à-dire qu'il regroupe l'évolution temporelle de plusieurs variables explicatives. Cela permet la détection de corrélations entre ces variables au fil du temps. Pour gérer ce type de données, nous avons considéré différents modèles de séries temporelles multivariées. Ces modèles incluent des techniques de décomposition de séries temporelles pour isoler les tendances, les saisons et les résidus des séries.
-""")
     ts_model_selected = st.radio("", ts_models, label_visibility="collapsed")
     st.write(":information_source:", ts_model_descriptions[ts_model_selected])
     
@@ -68,37 +67,31 @@ Le jeu de données utilisé dans ce projet est une série temporelle multivarié
 Ce projet se concentre sur la classification de données déséquilibrées, similaire à la détection d'anomalies. Pour traiter les données déséquilibrées, nous avons recours à des techniques de sous-échantillonnage et sur-échantillonnage pour rééquilibrer les données et sélectionner la méthode la plus efficace en fonction des métriques choisies. La technique du sous-échantillonnage "RandomUnderSampler" a été utilisée car elle s'est avérée la plus performante étant donné l'ampleur de notre ensemble de données (145,460 observations) et les conséquences sur les performances de certains algorithmes.
 """)
 
-    # Données pour le camembert
     data = {'Classe 0 : 78%': 78, 'Classe 1 : 22%': 22}
-
-    # Génération du graphique
     plt.pie(data.values(), labels=data.keys())
 
-    # Convertir en une image
     buf = io.BytesIO()
     plt.savefig(buf, format='png')
     buf.seek(0)
-    im = Image.open(buf)
+    im1 = Image.open(buf)
 
-    col1, col2 = st.columns(2)
-    
-    # Afficher l'image
-    col1.image(im, width=500, caption="Répartition des classes de la variable cible \"RainTomorrow\" sur toutes les observations du jeu de données original")
-      
     data = {
         "Ensemble d'entraînement": {'class 0': 76696, 'class 1': 21854},
-        "Ensemble d'entraînement ré-échantillonné": {'class 0': 21854, 'class 1': 21854},
+        "Ensemble d'entraînement rééchantillonné": {'class 0': 21854, 'class 1': 21854},
         "Ensemble de test": {'class 0': 32890, 'class 1': 9347}
     }
 
     fig = go.Figure()
-    colors = {"Ensemble d'entraînement": ['blue', 'blue'], "Ensemble d'entraînement ré-échantillonné": ['purple', 'purple'],"Ensemble de test": ['orange', 'orange']}
+    colors = {"Ensemble d'entraînement": ['blue', 'blue'], "Ensemble d'entraînement rééchantillonné": ['purple', 'purple'],"Ensemble de test": ['orange', 'orange']}
     for name, value in data.items():
-        fig.add_trace(go.Bar(x=list(value.keys()), y=list(value.values()), name=name,
-                            marker=dict(color=colors[name])))
-
-    fig.update_layout(barmode='group')
-    col2.plotly_chart(fig)
+        fig.add_trace(go.Bar(x=list(value.keys()), y=list(value.values()), name=name, marker=dict(color=colors[name])))
+    fig.update_layout(barmode='group')    
+    
+    col1, col2 = st.columns(2)
+    with col1:
+        st.image(im1, use_column_width='auto', caption="Répartition des classes de la variable cible \"RainTomorrow\"")
+    with col2:
+        st.plotly_chart(fig, use_container_width=True)
     
     st.subheader("Classification pénalisée")
     st.markdown("""
@@ -107,6 +100,13 @@ La classification pénalisée est une technique utilisée pour traiter les cas d
 Un des moyens courant pour mettre en place cette technique est d'utiliser l'argument "balanced" lors de la définition du modèle, ce qui permet d'attribuer à chaque classe un poids inversement proportionnel à sa fréquence d'apparition dans les données d'entraînement. Pour aller plus loin nous avons également testé différents ratios sur les classes pour déterminer la configuration qui donne les meilleurs résultats par rapport aux métriques principales et secondaires.
 
 En complément, nous avons ajusté le seuil de probabilité à partir duquel les prédictions sont classées comme positives ou nulles, c'est-à-dire la valeur seuil à partir de laquelle un individu sera classé dans la classe majoritaire ou la classe minoritaire. Ajuster ce seuil de manière optimale nous permet de marquer plus distinctement les classes et d'améliorer les performances de notre modèle.
+""")
+    
+    st.subheader("Métrique de performance principale")
+    st.markdown("""
+Lorsque l'on travaille sur un jeu de données de classification binaire déséquilibré, il est crucial d'utiliser des métriques de performance appropriées pour évaluer les performances de notre modèle. Pour évaluer les performances de ces modèles, des mesures de performance comme l'accuracy, le f1_score, la précision et le rappel ont été utilisées. Cependant, il est important de noter que ces mesures ne donnent pas une image complète de la performance du modèle car elles sont souvent biaisées en faveur de la classe majoritaire. C'est pourquoi il est important d'utiliser des métriques de performance secondaires pour obtenir une vision complète des performances de nos modèles. \n
+
+Parmi les métriques de performance secondaires couramment utilisées pour les jeux de données déséquilibrés, la métrique **f1_macro** est particulièrement judicieuse en tant que métrique de performance principale. Cette métrique calcule la moyenne arithmétique du f1_score pour chaque classe, en traitant ainsi toutes les classes de la même manière, quelle que soit leur distribution. Cette métrique est particulièrement adaptée pour les situations de classes déséquilibrées, car elle est indépendante de la répartition des classes dans les données. En plus de donner une idée plus précise des performances de notre modèle en prenant en compte les erreurs de classification pour les classes minoritaires, elle permet également de mieux comprendre les performances de chaque classe spécifique, ce qui est crucial pour pouvoir identifier les lacunes de performance pour les classes minoritaires. 
 """)
 
     metrics = ["f1_score", "f1_micro", "f1_weighted", "f1_macro"]
@@ -131,16 +131,14 @@ En complément, nous avons ajusté le seuil de probabilité à partir duquel les
         "$\\text{f1\_macro} = \\frac{\\sum_{i=1}^n f1_{class\_i}}{n}$",
     }
     
-    st.subheader("Métrique de performance principale")
-    st.markdown("""
-Lorsque l'on travaille sur un jeu de données de classification binaire déséquilibré, il est crucial d'utiliser des métriques de performance appropriées pour évaluer les performances de notre modèle. Pour évaluer les performances de ces modèles, des mesures de performance comme l'accuracy, le f1_score, la précision et le rappel ont été utilisées. Cependant, il est important de noter que ces mesures ne donnent pas une image complète de la performance du modèle car elles sont souvent biaisées en faveur de la classe majoritaire. C'est pourquoi il est important d'utiliser des métriques de performance secondaires pour obtenir une vision complète des performances de nos modèles. \n
-
-Parmi les métriques de performance secondaires couramment utilisées pour les jeux de données déséquilibrés, la métrique **f1_macro** est particulièrement judicieuse en tant que métrique de performance principale. Cette métrique calcule la moyenne arithmétique du **f1_score** pour chaque classe, en traitant ainsi toutes les classes de la même manière, quelle que soit leur distribution. Cette métrique est particulièrement adaptée pour les situations de classes déséquilibrées, car elle est indépendante de la répartition des classes dans les données. En plus de donner une idée plus précise des performances de notre modèle en prenant en compte les erreurs de classification pour les classes minoritaires, elle permet également de mieux comprendre les performances de chaque classe spécifique, ce qui est crucial pour pouvoir identifier les lacunes de performance pour les classes minoritaires. 
-""")
-    
     metric_selected = st.radio("", metrics, label_visibility="collapsed")
     st.write(":information_source:", metrics_descriptions[metric_selected])
     st.write(":pencil2:", metrics_expressions[metric_selected])
+    
+    st.subheader("Métriques de performance secondaires")
+    st.markdown("""
+    Dans le cadre de la modélisation d'un problème de classification binaire sur jeu de données déséquilibré, il est crucial d'utiliser des métriques de performance secondaires pour évaluer les performances de notre modèle. La métrique de performance f1_macro est couramment utilisée pour les jeux de données déséquilibrées car elle calcule la moyenne arithmétique du f1_score pour chaque classe, indépendamment de leur distribution. Cependant, elle ne donne pas d'indication sur les performances de chaque classe spécifique et peut sous-estimer les performances globales si certaines classes ont des tailles très différentes. Il est donc important de la combiner avec d'autres métriques pour avoir une analyse plus complète des performances du modèle.
+""")    
     
     sec_metrics = ["balanced_accuracy", "geometric_mean", "roc_auc"]
     sec_metrics_descriptions = {
@@ -160,41 +158,70 @@ Parmi les métriques de performance secondaires couramment utilisées pour les j
         "$\\text{roc\_auc} = \\frac{1 + Sensitivity - Specificity}{2}$"
     }
     
-    st.subheader("Métriques de performance secondaires")
-    
-    st.markdown("""
-    Dans le cadre de la modélisation d'un problème de classification binaire sur jeu de données déséquilibré, il est crucial d'utiliser des métriques de performance secondaires pour évaluer les performances de notre modèle. La métrique de performance **f1_macro** est couramment utilisée pour les jeux de données déséquilibrées car elle calcule la moyenne arithmétique du **f1_score** pour chaque classe, indépendamment de leur distribution. Cependant, elle ne donne pas d'indication sur les performances de chaque classe spécifique et peut sous-estimer les performances globales si certaines classes ont des tailles très différentes. Il est donc important de la combiner avec d'autres métriques pour avoir une analyse plus complète des performances du modèle.
-""")
-    
     sec_metric_selected = st.radio("", sec_metrics, label_visibility="collapsed")
     st.write(":information_source:", sec_metrics_descriptions[sec_metric_selected])
     st.write(":pencil2:", sec_metrics_expressions[sec_metric_selected])
     
-    st.subheader("Evaluation de modèles prédictifs")
-
+    st.header("Evaluation des modèles prédictifs")
+    st.subheader("Etude comparative")
     st.markdown("""
-Une étude comparative de plusieurs modèles de classification binaire par apprentissage supervisé a été menée en
-se basant sur le choix de métriques d’évaluation appropriées aux jeux de données déséquilibrées. Cette étude
-compare différents modèles avec et sans méthode de rééchantillonnage. Chacune des approches établit les
-performances des métriques d’évaluation considérées ("f1_macro", "balanced accuracy", "geometric_mean" et
-"roc_auc") en sélectionnant le meilleur estimateur parmi une grille de paramètres. Les différents résultats obtenus
-sont consolidés par validation croisée et accompagnés des courbes "ROC", de "gain cumulé" et de
-"precision-rappel". Une étude comparative basée sur la pondération des classes est effectuée pour tous les
-modèles (à l’exception du modèle KNN), et le seuil de probabilité est adapté dans toutes les modélisations pour
-mieux distinguer les classes. 
+Une analyse comparative de différents modèles de classification binaire par apprentissage supervisé a été menée en utilisant des métriques d'évaluation adaptées aux jeux de données déséquilibrés. Les modèles ont été comparés avec et sans méthode de rééchantillonnage. Les performances des métriques choisies ont été évaluées en sélectionnant les meilleurs estimateurs à partir d'une grille de paramètres. Les résultats ont été consolidés par validation croisée et illustrés par des courbes ROC, de gain cumulé et de précision-rappel. Une analyse basée sur la pondération des classes a été effectuée pour tous les modèles, à l'exception de KNN, et le seuil de probabilité a été ajusté pour une meilleure distinction des classes. \n
+
+Les meilleures performances de prévision de précipitations ont été obtenues avec une étape de sous-échantillonnage. Les performances de différents algorithmes sont résumées dans le tableau ci-dessous:
 """)
 
-    st.markdown("""
-Les meilleures performances obtenues correspondent aux modélisations des prévisions des précipitations avec étape de rééchantillonnage. Elles sont résumées dans le tableau suivant :
-""") 
-    img = Image.open("images/scores_with_resampling.png")
-    st.image(img, width=600, caption="Performances des différents algorithmes obtenus après sous-échantillonage des données")
+    df_scores = pd.DataFrame(data=[[0.599413, 0.719396, 0.772318, 0.772312, 0.772318],
+                                   [0.599413, 0.719396, 0.772318, 0.772312, 0.772318],
+                                   [0.599388, 0.719374, 0.772302, 0.772297, 0.772302],
+                                   [0.621623, 0.736925, 0.787982, 0.787981, 0.787982],
+                                   [0.622077, 0.736842, 0.788919, 0.788911, 0.788919],
+                                   [0.621099, 0.736475, 0.787678, 0.787677, 0.787678],
+                                   [0.612058, 0.729644, 0.781015, 0.781014, 0.781015],
+                                   [0.611697, 0.729226, 0.780933, 0.780932, 0.780933],
+                                   [0.616739, 0.732989, 0.784738, 0.784736, 0.784738],
+                                   [0.605684, 0.720882, 0.781044, 0.780715, 0.781044],
+                                   [0.585779, 0.708628, 0.762235, 0.762228, 0.762235],
+                                   [0.585861, 0.708685, 0.762304, 0.762297, 0.762304],
+                                   [0.578797, 0.697870, 0.761813, 0.761201, 0.761813]], 
+                             columns=['f1_score', 'f1_macro', 'bal_acc', 'moy_geom', 'roc_auc'], 
+                             index=['lr1', 'lr2', 'lr3', 'rf0', 'rf1', 'rf2', 'svm0', 'svm1', 'svm2', 'knn', 'dt0', 'dt1', 'dt2'])
+    st.dataframe(df_scores.style.highlight_max(axis=0), use_container_width=True)
     
     st.warning("""
-Pour chaque algorithme considéré (à l’exception du modèle knn), les index 1, 2 et 3 représentent les différentes
-itérations d’une étude comparative basée sur la pondération des classes, à savoir:
-- 0 : correspond au paramétrage "class_weight = None" dans la définition du modèle
-- 1 : correspond au paramétrage "class_weight = 'balanced'" dans la définition du modèle
-- 2 : correspond au paramétrage "class_weight = {0\:x, 1\:1-x}" dans la définition du modèle
-De plus, le seuil de probabilité est adapté automatiquement dans toutes les modélisations afin de mieux distinguer les classes.    
+Pour chaque algorithme considéré (à l'exception du modèle KNN), les index 1, 2 et 3 représentent les différentes itérations d'une étude comparative basée sur la pondération des classes. Ces itérations consistent à utiliser différents paramètres de pondération des classes dans la définition du modèle :
+
+- Itération 1 : "class_weight = None"
+- Itération 2 : "class_weight = 'balanced'"
+- Itération 3 : "class_weight = {0: x, 1: 1-x}"
+
+En outre, pour améliorer la distinction entre les classes, un seuil de probabilité est adapté automatiquement pour tous les modèles. Cela permet de classer les prédictions comme positives ou nulles de manière plus précise.    
 """, icon="⚠️")
+    
+    st.markdown("Les meilleures performances des modèles étudiés sont résumées dans le tableau ci-dessous :")
+    
+    df_best_scores = pd.DataFrame(data=[[0.599413, 0.719396, 0.772318, 0.772312, 0.772318],
+                                        [0.622077, 0.736842, 0.788919, 0.788911, 0.788919],
+                                        [0.616739, 0.732989, 0.784738, 0.784736, 0.784738],
+                                        [0.605684, 0.720882, 0.781044, 0.780715, 0.781044],
+                                        [0.585861, 0.708685, 0.762304, 0.762297, 0.762304]], 
+                             columns=['f1_score', 'f1_macro', 'bal_acc', 'moy_geom', 'roc_auc'], 
+                             index=['lr', 'rf', 'svm', 'knn', 'dt'])
+    st.dataframe(df_best_scores.style.highlight_max(axis=0), use_container_width=True)    
+        
+    st.subheader("Choix du meilleur modèle")
+    st.markdown("""
+Après avoir entraîné plusieurs modèles sur des features sélectionnées à partir de jeux de données nettoyés, nous avons opté pour un modèle de **forêt aléatoire** en raison de ses performances remarquables sur les métriques choisies. En termes pratiques, le temps de calcul et les ressources matérielles requises pour ce modèle étaient moins élevés que pour l'autre modèle le plus proche, SVM. Cette caractéristique rendait la forêt aléatoire plus facile à gérer pour des calculs locaux ou pour les services Cloud gratuits. De plus, la capacité d'interprétation des résultats obtenus avec la forêt aléatoire s'est avérée supérieure à celle de SVM.
+
+Bien que des traces de sur-entraînement (légère différence de score entre le jeu d'entraînement et le jeu de test) ont été repérées, les résultats de la validation croisée ont démontré que l'erreur sur le score du jeu de données était minime, il n'est donc pas nécessaire de poursuivre les analyses.
+    """)
+    
+    tab1, tab2 = st.tabs(["Diagramme en lignes", "Histogramme"])
+    
+    with tab1:
+        st.line_chart(df_best_scores, x=['f1_score', 'f1_macro', 'bal_acc', 'moy_geom', 'roc_auc'], use_container_width=True)
+    
+    with tab2:
+        st.bar_chart(df_best_scores, x=['f1_score', 'f1_macro', 'bal_acc', 'moy_geom', 'roc_auc'], use_container_width=True)
+    
+
+    

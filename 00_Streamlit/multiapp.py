@@ -19,7 +19,7 @@ class MultiApp:
         functions = [a["function"] for a in self.apps]
         default_radio = titles.index(app_state["page"]) if "page" in app_state else 0
 
-        st.sidebar.title(":rain_cloud: Projet PyAusRainfall :umbrella_with_rain_drops:")
+        st.sidebar.title("Projet PyAusRainfall :umbrella_with_rain_drops:")
 
         title = st.sidebar.radio("Menu", titles, index=default_radio, key="radio")
 
