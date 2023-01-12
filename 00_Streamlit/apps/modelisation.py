@@ -6,12 +6,6 @@ import io
 
 from PIL import Image
 
-# PLAN
-# ✅ Modélisation
-# ✅ Formulation du problème de Machine Learning
-# ❌ Evaluation des modèles prédictifs (visualisation comparative des performances)
-# ❌ Choix du meilleur modèle
-
 def app():
     st.title("Modélisation des données")
     st.header("Formulation du problème de Machine Learning")
