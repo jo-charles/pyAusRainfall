@@ -17,3 +17,5 @@ Humidity3pm et Humidity9am, en effet, un taux d’humidité important au jour J 
     st.dataframe(data.head(10))
     if st.checkbox("Afficher le résumé "):
         st.write(data.describe())
+
+        

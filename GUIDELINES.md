@@ -175,7 +175,7 @@ Cet ensemble de données contient environ 10 ans d'observations météorologique
 ### Répartition du travail
     • Introduction:  1 minutes (Olivier)
     • Prétraitement: 2 minutes (Olivier)
-    • Visualisation: 5 minutes (Anne Claire)
+    • Visualisation: 5 minutes (Anne-Claire)
     • Modélisation: 5 minutes (Joseph)
     • Démonstration: 5 minutes (Geneviève)
     • Conclusion: 2 minutes (Olivier)
