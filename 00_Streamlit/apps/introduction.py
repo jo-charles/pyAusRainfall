@@ -7,17 +7,35 @@ import geopandas as gpd
 DATASET_FOLDER = '../data/'
 
 def app():
-    st.title("Introduction")
-    st.header("Contexte et explication des objectifs du projet")
-    st.subheader("Prévisions météorologiques en Australie")
-    st.markdown(
-        """
-Cet ensemble de données contient environ 10 ans d'observations météorologiques quotidiennes provenant de nombreux endroits en Australie. Il y a donc différentes visualisations intéressantes possibles.
+    st.title("Présentation du projet")
+    st.header("Contexte et objectif")
+    st.markdown("""
+    Ce projet porte sur l'étude d'une série chronologique regroupant environ 10 années d'observations météorologiques quotidiennes en Australie.
+    
+    L'objectif principal est de prédire les précipitations du jour suivant l'observation à l'aide de la variable cible "RainTomorrow".
+    
+    Le sujet proposé permet la mise en pratique des connaissances acquises pendant la formation.
+    """)
+    
+    st.subheader("Sources de données")
+    st.markdown("""
+    The Bureau of Meteorology in Australia :
+    http://www.bom.gov.au/climate/data/
+    
+    Ces données sont également disponibles librement sur le site Kaggle à partir du lien suivant : https://www.kaggle.com/datasets/jsphyg/weather-dataset-rattle-package
+    """)      
 
-- Le premier objectif serait de prédire la variable cible "RainTomorrow". Elle signifie : a-t-il plu le jour suivant, oui ou non ? Cette colonne est "Oui" si la pluie pour ce jour était de 1mm ou plus. De même pour des prédictions de vent ou température.
-- Dans un second temps, on pourra effectuer des prédictions à long terme, en utilisant des techniques mathématiques d’analyse de séries temporelles, et/ou des réseaux de neurones récurrents.
-    """
-    )
+    st.subheader("Chiffres clés")
+    st.markdown("""
+    Les données disponibles vont de 2008 à 2017 et concernent 49 villes d'Australie.
+    
+    Le jeu de données se compose de 23 variables et 145 460 observations.
+    
+    La pluviométrie annuelle moyenne varie de 300 mm à 1 400 mm dans les zones les plus humides.
+    A titre de comparaison, les précipitations annuelles moyennes en France métropolitaine s’échelonnent de 500 à 2000 mm par an.
+    
+    """)
+    
     data_load_state = st.text('Loading data...')
     df = pd.read_csv(DATASET_FOLDER + "weatherAUS.csv")
     data_load_state.text("")
@@ -55,7 +73,7 @@ Cet ensemble de données contient environ 10 ans d'observations météorologique
     countries[countries["name"]=="Australia"].plot(color="lightgrey", ax=ax)
     
     df_lat_long.plot.scatter(x='Longitude', y='Latitude', c='Rainfall', cmap='viridis',
-                             title="Précipitations en mm depuis 2008",ax=ax)
+                             title="Précipitations en mm de 2008 à 2017",ax=ax)
     ax.grid(b=True,alpha=0.5)
     
     st.pyplot(fig)
