@@ -101,7 +101,7 @@ En complément, nous avons ajusté le seuil de probabilité à partir duquel les
     st.markdown("""
 Lorsque l'on travaille sur un jeu de données de classification binaire déséquilibré, il est crucial d'utiliser des métriques de performance appropriées pour évaluer les performances de notre modèle. Pour évaluer les performances de ces modèles, des mesures de performance comme l'accuracy, le f1_score, la précision et le rappel ont été utilisées. Cependant, il est important de noter que ces mesures peuvent ne pas donner une image complète de la performance du modèle car elles peuvent être biaisées en faveur de la classe majoritaire. Il est donc important d'utiliser des métriques complémentaires pour obtenir une vision plus complète des performances de nos modèles. 
 
-La métrique **f1_macro** est particulièrement adaptée pour les situations de classes déséquilibrées, car elle est indépendante de la répartition des classes dans les données.
+Nous avons choisi la métrique **f1_macro** comme métrique de performance principale car elle est particulièrement adaptée pour les situations de classes déséquilibrées.
 """)
 
     metrics = ["f1_score", "f1_micro", "f1_weighted", "f1_macro"]
@@ -270,7 +270,7 @@ Dans cette étude, nous avons mené une analyse comparative de différents modè
 
 Les résultats ont été obtenus en sélectionnant les meilleurs estimateurs à partir d'une grille de paramètres pour chaque modèle. Nous avons utilisé la validation croisée pour consolider les résultats et les avons illustrés à l'aide de courbes ROC, de gain cumulé et de précision-rappel. Nous avons également effectué une analyse basée sur la pondération des classes pour tous les modèles, à l'exception de KNN, et ajusté le seuil de probabilité pour une meilleure distinction des classes.
 
-Les meilleures performances de prévision ont été obtenues avec une étape de sous-échantillonnage. Les performances des différents algorithmes sont résumées ci-dessous :
+Les performances de prévision optimales ont été obtenues avec une étape de sous-échantillonnage, elles sont résumées ci-dessous :
 """)
     
     df_scores = pd.DataFrame(data=[[0.599413, 0.719396, 0.772318, 0.772312, 0.772318],
