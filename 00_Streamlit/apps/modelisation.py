@@ -63,7 +63,7 @@ Ce projet se concentre sur la **classification de données déséquilibrées**, 
 
     data = {'Classe 0 : 78%': 78, 'Classe 1 : 22%': 22}
     plt.pie(data.values(), labels=data.keys())
-    plt.title("Répartition des classes de la variable cible \"RainTomorrow\"", fontweight="bold")
+    plt.title("Répartition des classes de la variable cible \"RainTomorrow\"", fontsize=16, fontweight="bold")
 
     buf = io.BytesIO()
     plt.savefig(buf, format='png')
@@ -80,7 +80,7 @@ Ce projet se concentre sur la **classification de données déséquilibrées**, 
     colors = {"Ensemble d'entraînement": ['blue', 'blue'], "Ensemble d'entraînement rééchantillonné": ['purple', 'purple'], "Ensemble de test": ['orange', 'orange']}
     for name, value in data.items():
         fig.add_trace(go.Bar(x=list(value.keys()), y=list(value.values()), name=name, marker=dict(color=colors[name])))
-    fig.update_layout(barmode='group', title='Taille du jeu de données')    
+    fig.update_layout(barmode='group', yaxis_title='Taille du jeu de données')    
     
     col1, col2 = st.columns(2)
     with col1:
@@ -99,7 +99,9 @@ En complément, nous avons ajusté le seuil de probabilité à partir duquel les
     
     st.subheader("Métrique de performance principale")
     st.markdown("""
-Lorsque l'on travaille sur un jeu de données de classification binaire déséquilibré, il est crucial d'utiliser des métriques de performance appropriées pour évaluer les performances de notre modèle. Pour évaluer les performances de ces modèles, des mesures de performance comme l'accuracy, le f1_score, la précision et le rappel ont été utilisées. Cependant, il est important de noter que ces mesures peuvent ne pas donner une image complète de la performance du modèle car elles peuvent être biaisées en faveur de la classe majoritaire. Il est donc important d'utiliser des métriques complémentaires pour obtenir une vision plus complète des performances de nos modèles. La métrique **f1_macro** est particulièrement adaptée pour les situations de classes déséquilibrées, car elle est indépendante de la répartition des classes dans les données.
+Lorsque l'on travaille sur un jeu de données de classification binaire déséquilibré, il est crucial d'utiliser des métriques de performance appropriées pour évaluer les performances de notre modèle. Pour évaluer les performances de ces modèles, des mesures de performance comme l'accuracy, le f1_score, la précision et le rappel ont été utilisées. Cependant, il est important de noter que ces mesures peuvent ne pas donner une image complète de la performance du modèle car elles peuvent être biaisées en faveur de la classe majoritaire. Il est donc important d'utiliser des métriques complémentaires pour obtenir une vision plus complète des performances de nos modèles. 
+
+La métrique **f1_macro** est particulièrement adaptée pour les situations de classes déséquilibrées, car elle est indépendante de la répartition des classes dans les données.
 """)
 
     metrics = ["f1_score", "f1_micro", "f1_weighted", "f1_macro"]
@@ -111,7 +113,7 @@ Lorsque l'on travaille sur un jeu de données de classification binaire déséqu
         "f1_weighted": 
         "Le **f1_weighted** est une variante de la métrique f1_score qui prend en compte la répartition des classes dans les données. Il calcule la moyenne pondérée des f1_score pour chaque classe en utilisant le nombre d'exemples de chaque classe comme poids. Cela signifie que les classes avec plus d'exemples auront plus d'influence sur la valeur globale de la métrique.",
         "f1_macro":
-        "Le **f1_macro** est une méthode d'évaluation pour les modèles de classification qui calcule la moyenne des scores f1 pour chaque classe, sans prendre en compte la répartition des classes dans les données. Il calcule la moyenne arithmétique du f1 pour chaque classe, en traitant ainsi toutes les classes de manière égale, indépendamment de leur fréquence dans les données."
+        "Le **f1_macro** est une méthode d'évaluation pour les modèles de classification qui calcule la moyenne arithmétique du f1_score pour chaque classe, en traitant ainsi toutes les classes de manière égale, indépendamment de leur fréquence dans les données."
     }    
     
     metrics_pros = {
@@ -194,13 +196,13 @@ Lorsque l'on travaille sur un jeu de données de classification binaire déséqu
     sec_metrics = ["balanced_accuracy", "geometric_mean", "roc_auc"]
     sec_metrics_descriptions = {
         "balanced_accuracy":
-        """La **balanced_accuracy** est une méthode d'évaluation des modèles de classification binaire qui calcule la moyenne arithmétique des taux de vrais positifs et de vrais négatifs pour chaque classe en prenant en compte la répartition des classes dans les données. Cette métrique est particulièrement adaptée pour les situations de classes déséquilibrées car elle permet de tenir compte de la répartition des classes dans les données et de fournir une mesure de la performance pour chaque classe, indépendamment de la fréquence d'apparition de cette classe dans les données. Elle permet également de mieux comprendre les performances de chaque classe spécifique, ce qui est crucial pour pouvoir identifier les lacunes de performance pour les classes minoritaires. Cette métrique est donc particulièrement utile pour évaluer les modèles de classification binaire sur des jeux de données déséquilibrées.
+        """La **balanced_accuracy** est une méthode d'évaluation des modèles de classification binaire qui calcule la moyenne arithmétique des taux de vrais positifs et de vrais négatifs pour chaque classe en prenant en compte la répartition des classes dans les données. Cette métrique est particulièrement adaptée pour les situations de classes déséquilibrées car elle permet de tenir compte de la répartition des classes dans les données et de fournir une mesure de la performance pour chaque classe, indépendamment de la fréquence d'apparition de cette classe dans les données. Elle permet également de mieux comprendre les performances de chaque classe spécifique, ce qui est crucial pour pouvoir identifier les lacunes de performance pour les classes minoritaires.
         """,
         "geometric_mean":
         """La **geometric_mean** est une méthode d'évaluation pour les modèles de classification binaire qui calcule la moyenne géométrique des taux de vrais positifs (TPR) et de vrais négatifs (TNR) pour chaque classe. Cette métrique est particulièrement utile pour les jeux de données déséquilibrées car elle permet de prendre en compte les performances des deux classes simultanément et de mettre l'accent sur les performances pour les classes minoritaires.
         """,
         "roc_auc": 
-        """La **roc_auc** est une méthode d'évaluation des modèles de classification binaire qui prend en compte le compromis entre les taux de vrais positifs et les taux de faux positifs pour un modèle donné. Elle utilise la courbe ROC qui représente les taux de vrais positifs en fonction des taux de faux positifs pour visualiser les performances d'un modèle pour différents seuils de classification. L'AUC (Area Under the Curve) est ensuite utilisée pour quantifier ces performances en un seul score numérique. Cette métrique est particulièrement utile pour les jeux de données déséquilibrées car elle prend en compte la distribution des classes dans les données et permet de mieux comprendre les performances d'un modèle en termes de capacité à détecter les cas positifs. Il est important de noter que la ROC-AUC peut être sensible aux données déséquilibrées, car un petit nombre de prédictions correctes/incorrectes peut entraîner une grande variation du score.
+        """La **roc_auc** est une méthode d'évaluation des modèles de classification binaire qui prend en compte le compromis entre les taux de vrais positifs et les taux de faux positifs pour un modèle donné. Elle utilise la courbe ROC qui représente les taux de vrais positifs en fonction des taux de faux positifs pour visualiser les performances d'un modèle pour différents seuils de classification. L'AUC (Area Under the Curve) est ensuite utilisée pour quantifier ces performances en un seul score numérique. Cette métrique est particulièrement utile pour les jeux de données déséquilibrées car elle prend en compte la distribution des classes dans les données et permet de mieux comprendre les performances d'un modèle en termes de capacité à détecter les cas positifs.
         """
     }
     
@@ -337,8 +339,3 @@ Les résultats de la validation croisée ont montré que ce modèle présentait 
 
 En conséquence, nous avons conclu que **le modèle des forêts aléatoires est le plus approprié** pour résoudre notre problème de classification binaire.
     """)
-    
-
-    
-
-    
