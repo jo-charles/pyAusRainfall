@@ -63,7 +63,7 @@ Ce projet se concentre sur la **classification de données déséquilibrées**, 
 
     data = {'Classe 0 : 78%': 78, 'Classe 1 : 22%': 22}
     plt.pie(data.values(), labels=data.keys())
-    plt.title("Répartition des classes de la variable cible \"RainTomorrow\"", fontsize=16, fontweight="bold")
+    plt.title("Répartition des classes de la variable cible \"RainTomorrow\"", fontsize=10, fontweight="bold")
 
     buf = io.BytesIO()
     plt.savefig(buf, format='png')
