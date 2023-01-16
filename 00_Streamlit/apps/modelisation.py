@@ -10,11 +10,13 @@ def app():
     st.title("Modélisation des données")
     st.header("Formulation du problème de Machine Learning")
     st.subheader("Classification binaire par apprentissage supervisé")
-    st.markdown("""
-Ce projet vise à résoudre un problème de **classification binaire** en utilisant des techniques d'**apprentissage supervisé**. Il s'agit de prévoir la valeur d'une variable cible quantitative en utilisant des données étiquetées qui comprennent des entrées et des sorties. Grâce à ces étiquettes, le modèle peut évaluer son exactitude et continuer à s'améliorer au fil du temps. En utilisant des techniques d'apprentissage supervisé, le modèle est capable de généraliser à de nouvelles données, en s'appuyant sur les connaissances acquises lors de l'entraînement.
+    st.markdown("""<style>.normal-font {font-size:13.5pt}</style>""", unsafe_allow_html=True)
+    st.markdown("""<style>.small-font {font-size:11.5pt}</style>""", unsafe_allow_html=True)
+    st.markdown("""<p class="normal-font">
+Ce projet vise à résoudre un problème de <b>classification binaire</b> en utilisant des techniques d'<b>apprentissage supervisé</b>. Il s'agit de prévoir la valeur d'une variable cible quantitative en utilisant des données étiquetées qui comprennent des entrées et des sorties. Grâce à ces étiquettes, le modèle peut évaluer son exactitude et continuer à s'améliorer au fil du temps. En utilisant des techniques d'apprentissage supervisé, le modèle est capable de généraliser à de nouvelles données, en s'appuyant sur les connaissances acquises lors de l'entraînement.</p>
 
-Nous avons testé différents modèles de classification binaire pour prédire une variable cible et déterminer le meilleur modèle pour résoudre notre problème de classification binaire en comparant les algorithmes utilisés.
-""")
+<p class="normal-font">Nous avons testé différents modèles de classification binaire pour prédire une variable cible et déterminer le meilleur modèle pour résoudre notre problème de classification binaire en comparant les algorithmes utilisés.
+</p>""", unsafe_allow_html=True)
     
     models = ["Régression logistique (Logistic Regression)", 
           "Forêts aléatoires (Random Forest)", 
@@ -39,9 +41,8 @@ Nous avons testé différents modèles de classification binaire pour prédire u
     st.write(":information_source:", model_descriptions[model_selected])
  
     st.markdown("""
----
-Le jeu de données utilisé dans ce projet est une **série temporelle multivariée**, c'est-à-dire qu'il regroupe l'évolution temporelle de plusieurs variables explicatives. Cela permet la détection de corrélations entre ces variables au fil du temps. Pour gérer ce type de données, nous avons également considéré différents modèles de séries temporelles multivariées. Ces modèles incluent des techniques de décomposition de séries temporelles pour isoler les tendances, les saisons et les résidus des séries.
-""")
+<p class="normal-font">Le jeu de données utilisé dans ce projet est une <b>série temporelle multivariée</b>, c'est-à-dire qu'il regroupe l'évolution temporelle de plusieurs variables explicatives. Cela permet la détection de corrélations entre ces variables au fil du temps. Pour gérer ce type de données, nous avons également considéré différents modèles de séries temporelles multivariées. Ces modèles incluent des techniques de décomposition de séries temporelles pour isoler les tendances, les saisons et les résidus des séries.</p>
+""", unsafe_allow_html=True)
 
     ts_models = ["ARIMA (Auto-Regressive Integrated Moving Average)", 
          "SARIMA (Seasonal Auto-Regressive Integrated Moving Average)"]
@@ -58,12 +59,12 @@ Le jeu de données utilisé dans ce projet est une **série temporelle multivari
     
     st.subheader("Classification de données déséquilibrées")
     st.markdown("""
-Ce projet se concentre sur la **classification de données déséquilibrées**, similaire à la détection d'anomalies. Pour traiter les données déséquilibrées, nous avons recours à des techniques de sous-échantillonnage et sur-échantillonnage pour rééquilibrer les données et sélectionner la méthode la plus efficace en fonction des métriques choisies. La technique du sous-échantillonnage *"RandomUnderSampler"* a été utilisée car elle s'est avérée la plus performante étant donné l'ampleur de notre ensemble de données (145,460 observations) et les conséquences sur les performances de certains algorithmes.
-""")
+<p class="normal-font">Ce projet se concentre sur la <b>classification de données déséquilibrées</b>, similaire à la détection d'anomalies. Pour traiter les données déséquilibrées, nous avons recours à des techniques de sous-échantillonnage et sur-échantillonnage pour rééquilibrer les données et sélectionner la méthode la plus efficace en fonction des métriques choisies. La technique du sous-échantillonnage <em>"RandomUnderSampler"</em> a été utilisée car elle s'est avérée la plus performante étant donné l'ampleur de notre ensemble de données (145,460 observations) et les conséquences sur les performances de certains algorithmes.</p>
+""", unsafe_allow_html=True)
 
     data = {'Classe 0 : 78%': 78, 'Classe 1 : 22%': 22}
     plt.pie(data.values(), labels=data.keys())
-    plt.title("Répartition des classes de la variable cible \"RainTomorrow\"", fontsize=10, fontweight="bold")
+    plt.title("Répartition des classes de la variable cible \"RainTomorrow\"", fontsize=13.5, fontweight="bold")
 
     buf = io.BytesIO()
     plt.savefig(buf, format='png')
@@ -80,7 +81,7 @@ Ce projet se concentre sur la **classification de données déséquilibrées**, 
     colors = {"Ensemble d'entraînement": ['blue', 'blue'], "Ensemble d'entraînement rééchantillonné": ['purple', 'purple'], "Ensemble de test": ['orange', 'orange']}
     for name, value in data.items():
         fig.add_trace(go.Bar(x=list(value.keys()), y=list(value.values()), name=name, marker=dict(color=colors[name])))
-    fig.update_layout(barmode='group', yaxis_title='Taille du jeu de données')    
+    fig.update_layout(barmode='group', yaxis_title='Taille du jeu de données',width=500,height=700)    
     
     col1, col2 = st.columns(2)
     with col1:
@@ -90,19 +91,19 @@ Ce projet se concentre sur la **classification de données déséquilibrées**, 
     
     st.subheader("Classification pénalisée")
     st.markdown("""
-La **classification pénalisée** est une technique utilisée pour traiter les cas de données déséquilibrées. Elle permet d’appliquer des coûts supplémentaires au modèle pour les erreurs de classification commises sur la classe minoritaire pendant l'entraînement. Ces pénalités sur les erreurs ont pour objectif d'inciter les modèles à accorder plus d'attention à la classe minoritaire, afin de réduire les biais dans les prédictions.
+<p class="normal-font">La <b>classification pénalisée</b> est une technique utilisée pour traiter les cas de données déséquilibrées. Elle permet d’appliquer des coûts supplémentaires au modèle pour les erreurs de classification commises sur la classe minoritaire pendant l'entraînement. Ces pénalités sur les erreurs ont pour objectif d'inciter les modèles à accorder plus d'attention à la classe minoritaire, afin de réduire les biais dans les prédictions.</p>
 
-Un des moyens courant pour mettre en place cette technique est d'utiliser l'argument *"class_weight = 'balanced'"* lors de la définition du modèle, ce qui permet d'attribuer à chaque classe un poids inversement proportionnel à sa fréquence d'apparition dans les données d'entraînement. Pour aller plus loin, nous avons également testé différents ratios sur les classes en utilisant *"class_weight = {0: x, 1: 1-x}"* pour déterminer la configuration qui donne les meilleurs résultats par rapport aux métriques principales et secondaires.
+<p class="normal-font">Un des moyens courant pour mettre en place cette technique est d'utiliser l'argument <em>"class_weight = 'balanced'"</em> lors de la définition du modèle, ce qui permet d'attribuer à chaque classe un poids inversement proportionnel à sa fréquence d'apparition dans les données d'entraînement. Pour aller plus loin, nous avons également testé différents ratios sur les classes en utilisant <em>"class_weight = {0: x, 1: 1-x}"</em> pour déterminer la configuration qui donne les meilleurs résultats par rapport aux métriques principales et secondaires.</p>
 
-En complément, nous avons ajusté le seuil de probabilité à partir duquel les prédictions sont classées comme positives ou nulles, c'est-à-dire la valeur seuil à partir de laquelle un individu sera classé dans la classe majoritaire ou la classe minoritaire. Ajuster ce seuil de manière optimale nous permet de marquer plus distinctement les classes et d'améliorer les performances de notre modèle.
-""")
+<p class="normal-font">En complément, nous avons ajusté le seuil de probabilité à partir duquel les prédictions sont classées comme positives ou nulles, c'est-à-dire la valeur seuil à partir de laquelle un individu sera classé dans la classe majoritaire ou la classe minoritaire. Ajuster ce seuil de manière optimale nous permet de marquer plus distinctement les classes et d'améliorer les performances de notre modèle.</p>
+""", unsafe_allow_html=True)
     
     st.subheader("Métrique de performance principale")
     st.markdown("""
-Lorsque l'on travaille sur un jeu de données de classification binaire déséquilibré, il est crucial d'utiliser des métriques de performance appropriées pour évaluer les performances de notre modèle. Pour évaluer les performances de ces modèles, des mesures de performance comme l'accuracy, le f1_score, la précision et le rappel ont été utilisées. Cependant, il est important de noter que ces mesures peuvent ne pas donner une image complète de la performance du modèle car elles peuvent être biaisées en faveur de la classe majoritaire. Il est donc important d'utiliser des métriques complémentaires pour obtenir une vision plus complète des performances de nos modèles. 
+<p class="normal-font">Lorsque l'on travaille sur un jeu de données de classification binaire déséquilibré, il est crucial d'utiliser des métriques de performance appropriées pour évaluer les performances de notre modèle. Pour évaluer les performances de ces modèles, des mesures de performance comme l'<em>accuracy</em>, le <em>f1_score</em>, la <em>précision</em> et le <em>rappel</em> ont été utilisées. Cependant, il est important de noter que ces mesures peuvent ne pas donner une image complète de la performance du modèle car elles peuvent être biaisées en faveur de la classe majoritaire. Il est donc important d'utiliser des métriques complémentaires pour obtenir une vision plus complète des performances de nos modèles.</p>
 
-Nous avons choisi la métrique **f1_macro** comme métrique de performance principale car elle est particulièrement adaptée pour les situations de classes déséquilibrées.
-""")
+<p class="normal-font">Nous avons choisi la métrique <b>f1_macro</b> comme métrique de performance principale car elle est particulièrement adaptée pour les situations de classes déséquilibrées.</p>
+""", unsafe_allow_html=True)
 
     metrics = ["f1_score", "f1_micro", "f1_weighted", "f1_macro"]
     metrics_descriptions = {
@@ -172,8 +173,8 @@ Nous avons choisi la métrique **f1_macro** comme métrique de performance princ
     st.write(":pencil2:", metrics_expressions[metric_selected])
     
     st.subheader("Métriques de performance secondaires")
-    st.markdown("""Il est important d'utiliser des métriques de performances secondaires pour avoir une vue complète des performances d'un modèle de classification binaire. En utilisant une seule métrique, il est possible de sous-estimer les performances globales ou de ne pas avoir une vue précise des performances pour chaque classe spécifique. En utilisant des métriques supplémentaires, il est possible de combler les lacunes de la métrique principale et de mieux comprendre les performances du modèle, notamment pour les classes minoritaires. Cela permet également de choisir la métrique la plus adaptée pour le jeu de données spécifique et de prendre des décisions éclairées quant aux performances et à l'optimisation du modèle.
-""")
+    st.markdown("""<p class="normal-font">Il est important d'utiliser des métriques de performances secondaires pour avoir une vue complète des performances d'un modèle de classification binaire. En utilisant une seule métrique, il est possible de sous-estimer les performances globales ou de ne pas avoir une vue précise des performances pour chaque classe spécifique. En utilisant des métriques supplémentaires, il est possible de combler les lacunes de la métrique principale et de mieux comprendre les performances du modèle, notamment pour les classes minoritaires. Cela permet également de choisir la métrique la plus adaptée pour le jeu de données spécifique et de prendre des décisions éclairées quant aux performances et à l'optimisation du modèle.</p>
+""", unsafe_allow_html=True)
     
     sec_metrics = ["balanced_accuracy", "geometric_mean", "roc_auc"]
     sec_metrics_descriptions = {
@@ -236,12 +237,12 @@ Nous avons choisi la métrique **f1_macro** comme métrique de performance princ
     st.header("Evaluation des modèles prédictifs")
     st.subheader("Etude comparative")
     st.markdown("""
-Dans cette étude, nous avons mené une analyse comparative de différents modèles de classification binaire supervisés pour traiter des jeux de données déséquilibrés. Pour évaluer les performances des modèles, nous avons utilisé des métriques spécifiques à ces types de données, telles que l'accuracy, le f1_score, la précision et le rappel. Nous avons comparé les performances des modèles avec et sans méthode de rééchantillonnage pour rééquilibrer les données.
+<p class="normal-font">Dans cette étude, nous avons mené une analyse comparative de différents modèles de classification binaire supervisés pour traiter des jeux de données déséquilibrés. Pour évaluer les performances des modèles, nous avons comparé les performances des modèles avec et sans méthode de rééchantillonnage pour rééquilibrer les données.</p>
 
-Les résultats ont été obtenus en sélectionnant les meilleurs estimateurs à partir d'une grille de paramètres pour chaque modèle. Nous avons utilisé la validation croisée pour consolider les résultats et les avons illustrés à l'aide de courbes ROC, de gain cumulé et de précision-rappel. Nous avons également effectué une analyse basée sur la pondération des classes pour tous les modèles, à l'exception de KNN, et ajusté le seuil de probabilité pour une meilleure distinction des classes.
+<p class="normal-font">Les résultats ont été obtenus en sélectionnant les meilleurs estimateurs à partir d'une grille de paramètres pour chaque modèle. Nous avons utilisé la validation croisée pour consolider les résultats et les avons illustrés à l'aide de <em>courbes ROC</em>, de <em>gain cumulé</em> et de <em>précision-rappel</em>. Nous avons également effectué une analyse basée sur la pondération des classes pour tous les modèles le permettant, et ajusté le seuil de probabilité pour une meilleure distinction des classes.</p>
 
-Les performances de prévision optimales ont été obtenues avec une étape de sous-échantillonnage, elles sont résumées ci-dessous :
-""")
+<p class="normal-font">Les performances de prévision optimales ont été obtenues avec une étape de sous-échantillonnage, elles sont résumées ci-dessous pour chacune des métriques considérées :</p>
+""", unsafe_allow_html=True)
     
     df_scores = pd.DataFrame(data=[[0.599413, 0.719396, 0.772318, 0.772312, 0.772318],
                                    [0.599413, 0.719396, 0.772318, 0.772312, 0.772318],
@@ -271,7 +272,7 @@ Les performances de prévision optimales ont été obtenues avec une étape de s
         st.bar_chart(df_scores, x=['f1_score', 'f1_macro', 'bal_acc', 'moy_geom', 'roc_auc'], use_container_width=True)
     
     st.warning("""
-Pour chaque algorithme considéré (à l'exception du modèle KNN), les index 1, 2 et 3 représentent les différentes itérations d'une étude comparative basée sur la pondération des classes. Ces itérations consistent à utiliser différents paramètres de pondération des classes dans la définition du modèle :
+Pour chaque algorithme considéré (à l'exception du modèle KNN), les index 1, 2 et 3 représentent les différentes itérations d'une étude comparative basée le paramétrage de pondération des classes dans la définition du modèle :
 
 - Itération 1 : "class_weight = None"
 - Itération 2 : "class_weight = 'balanced'"
@@ -281,7 +282,7 @@ En outre, pour améliorer la distinction entre les classes, un seuil de probabil
 """, icon="⚠️")
     
     st.subheader("Choix du meilleur modèle")
-    st.markdown("Les meilleures performances des modèles étudiés sont résumées ci-dessous :")
+    st.markdown("""<p class="normal-font">Les meilleures performances des modèles étudiés sont résumées ci-dessous :</p>""", unsafe_allow_html=True)
     
     df_best_scores = pd.DataFrame(data=[[0.599413, 0.719396, 0.772318, 0.772312, 0.772318],
                                         [0.622077, 0.736842, 0.788919, 0.788911, 0.788919],
@@ -303,9 +304,9 @@ En outre, pour améliorer la distinction entre les classes, un seuil de probabil
         st.bar_chart(df_best_scores, x=['f1_score', 'f1_macro', 'bal_acc', 'moy_geom', 'roc_auc'], use_container_width=True)
     
     st.markdown("""
-Dans cette étude, nous avons comparé les performances de différents modèles de classification binaire par apprentissage supervisé en utilisant des métriques d'évaluation adaptées aux jeux de données déséquilibrés. Après avoir entraîné ces modèles sur des features sélectionnées à partir de jeux de données nettoyés, nous avons opté pour un modèle de forêt aléatoire en raison de ses performances remarquables. 
+<p class="normal-font">Dans cette étude, nous avons comparé les performances de différents modèles de classification binaire par apprentissage supervisé en utilisant des métriques d'évaluation adaptées aux jeux de données déséquilibrés. Après avoir entraîné ces modèles sur des features sélectionnées à partir de jeux de données nettoyés, nous avons opté pour un modèle de forêt aléatoire en raison de ses performances remarquables.</p>
 
-Les résultats de la validation croisée ont montré que ce modèle présentait une erreur sur le score du jeu de données minime, malgré des traces de sur-entraînement. En termes pratiques, le temps de calcul et les ressources matérielles requises pour ce modèle étaient moins élevés que pour l'autre modèle le plus proche, SVM, et sa capacité d'interprétation des résultats s'est avérée supérieure. 
+<p class="normal-font">Les résultats de la validation croisée ont montré que ce modèle présentait une erreur sur le score du jeu de données minime, malgré des traces de sur-entraînement. En termes pratiques, le temps de calcul et les ressources matérielles requises pour ce modèle étaient moins élevés que pour l'autre modèle le plus proche, SVM, et sa capacité d'interprétation des résultats s'est avérée supérieure.</p>
 
-En conséquence, nous avons conclu que **le modèle des forêts aléatoires est le plus approprié** pour résoudre notre problème de classification binaire.
-    """)
+<p class="normal-font">En conséquence, nous avons conclu que <b><font color="#0f8044">le modèle des forêts aléatoires est le plus approprié</font></b> pour résoudre notre problème de classification binaire.</p>
+""", unsafe_allow_html=True)
