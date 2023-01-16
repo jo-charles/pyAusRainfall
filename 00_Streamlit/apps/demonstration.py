@@ -13,7 +13,6 @@ def app():
     st.subheader("Interpretabilité du modèle")
     st.markdown(
             """
-            A comparitive study of the performance of the various modeles led to the selection of Random Forest as the model of choice for this project. However, there are times when a performant model will not be the best choice if its interpretability is not sufficient for the end goal. With this in mind, the feature importance was studied. Voici les résultats du modèle par l'importance des variables en considérant la diminution moyenne de l'impureté pour tous les arbres de notre forêt.
             Une étude comparative des performances des différents modèles a mené à la sélection de la forêt aléatoire comme modèle de choix pour ce projet. Cependant, le modèle le plus performant n'est pas toujours le meilleur choix si son interprétabilité n'est pas suffisante pour le but final. L'importance des différentes features a donc été étudiée avec ceci en tête. Voici l'importance des features sur les résultats du modèle, en considérant la diminution moyenne de l'impureté pour tous les arbres de notre forêt.
             """
     )
@@ -31,7 +30,6 @@ def app():
     
     st.markdown(
         """
-        We can use the results of the feature importance to demonstrate the predictive power of the model and to get an intuitive understanding of how we should interpret them. First we can select one data point at random from the entire data set, and focus in on the values for the most important features within. 
         Nous pouvons utiliser les resultats de l'importance des features pour démontrer le pouvoir de prédiction du modèle, et comprendre de manière plus intuitive comment les interprêter. D'abord, nous allons sélectionner une donnée au hasard parmi tout le data set, et se focaliser seulement sur les variables les plus importantes. """
     )
     
@@ -75,7 +73,6 @@ def app():
     st.markdown(
         
        """
-       Next we use our model to make a prediction about whether we should plan to take our umbrella the following day.
        Ensuite, nous allons utiliser le modèle pour prédire s'il faut prévoir le parapluie le jour suivant. """
     )
     
@@ -88,7 +85,6 @@ def app():
 
     st.markdown(
         """
-        Finally we check whether our prediction was correct or not by comparing it against the actual result.
         Enfin, nous allons vérifier si la prédiction était correcte, en révélant le résultat réel. 
         """
     )
