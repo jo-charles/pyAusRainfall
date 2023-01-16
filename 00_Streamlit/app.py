@@ -1,5 +1,7 @@
 import streamlit as st
 from multiapp import MultiApp
+from prediction import predict
+from selection import select
 from apps import introduction, pretraitement, visualisation, modelisation, demonstration, conclusion
 
 st.set_page_config(layout="wide")
@@ -23,7 +25,7 @@ with st.sidebar:
     - Anne-Claire OGIERAIKHI
     - Joseph CHARLES ([Linkedin](https://fr.linkedin.com/in/josephcharles1))
     - Olivier AMABLE ([Linkedin](https://fr.linkedin.com/in/olivier-amable))
-    - Geneviève STEELE
+    - Genevieve STEELE
     
     ### Encadré par : 
     - Laurène BOUSKILA
