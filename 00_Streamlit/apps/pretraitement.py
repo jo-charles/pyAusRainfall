@@ -106,9 +106,17 @@ def app():
     st.header("Standardisation")
     st.markdown("""
                 <p class="normal-font">Nous avons standardisé nos données en utilisant la méthode standard car les features répondent à des distributions normales (Distributions Gaussiennes)
-                """, unsafe_allow_html=True) 
-
+                """, unsafe_allow_html=True)
     st.header("Résulats")   
     st.markdown("""
                 <p class="normal-font">Finalement, après avoir écarté les variables catégorielles, remplacé certaines variables trop fortement corrélées entre elles et ajouté de nouvelles variables explicatives, le jeu de données a subi une <b>réduction significative de 3.2% des observations et de 39,1% des variables</b>.
+                Taille du DataFrame réduit:""", unsafe_allow_html=True)
+    st.markdown("""
+                <p class="normal-font">- <b>Nombre d'observations initiales : 145 460 </b>
+                <p class="normal-font">- <b>Nombre de variables initiales: 23 </b>
+                """, unsafe_allow_html=True)
+    st.text("")
+    st.markdown("""
+                <p class="normal-font">- <b>Nombre d'observations actuelles: 140 787</b> 
+                <p class="normal-font">- <b>Nombre de variables actuelle: 14 </b>
                 """, unsafe_allow_html=True)

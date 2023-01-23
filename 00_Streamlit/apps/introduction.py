@@ -17,7 +17,7 @@ def app():
                 <p class="normal-font">Le sujet proposé permet la mise en pratique des connaissances acquises pendant la formation.
                 """, unsafe_allow_html=True)
     
-    st.subheader("Sources de données")
+    st.header("Sources de données")
     st.markdown("""
                 <p class="normal-font">The Bureau of Meteorology in Australia :
                 """, unsafe_allow_html=True)      
@@ -33,7 +33,7 @@ def app():
                 https://www.kaggle.com/datasets/jsphyg/weather-dataset-rattle-package
                 """)     
 
-    st.subheader("Chiffres clés")
+    st.header("Chiffres clés")
     st.markdown("""
                 <p class="normal-font">Les données disponibles vont de 2008 à 2017 et concernent <b>49 villes d'Australie</b>.</p>
                 <p class="normal-font">Le jeu de données se compose de <b>23 variables</b> et <b>145 460 observations</b>.</p>
