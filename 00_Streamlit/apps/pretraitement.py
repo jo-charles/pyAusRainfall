@@ -82,7 +82,7 @@ def app():
     
     df = pd.read_csv("../data/weatherAUS_Rev0.csv", index_col=0)
     # matrice de corrélation
-    fig, ax = plt.subplots(figsize=(8,8))
+    fig, ax = plt.subplots(figsize=(13,13))
     annot_kws={'fontsize':10, 'color':"k", 'verticalalignment':'center'}
     sns.heatmap(df.corr(), linewidths=0.5, annot=True, annot_kws=annot_kws, fmt=".2f", ax=ax, cmap='coolwarm', center=0)
     plt.title('Matrice de corrélation du jeu de données', fontsize="small")
@@ -107,7 +107,7 @@ def app():
     st.markdown("""
                 <p class="normal-font">Nous avons standardisé nos données en utilisant la méthode standard car les features répondent à des distributions normales (Distributions Gaussiennes)
                 """, unsafe_allow_html=True)
-    st.header("Résulats")   
+    st.header("Résultats")   
     st.markdown("""
                 <p class="normal-font">Finalement, après avoir écarté les variables catégorielles, remplacé certaines variables trop fortement corrélées entre elles et ajouté de nouvelles variables explicatives, le jeu de données a subi une <b>réduction significative de 3.2% des observations et de 39,1% des variables</b>.
                 Taille du DataFrame réduit:""", unsafe_allow_html=True)
@@ -118,5 +118,5 @@ def app():
     st.text("")
     st.markdown("""
                 <p class="normal-font">- <b>Nombre d'observations actuelles: 140 787</b> 
-                <p class="normal-font">- <b>Nombre de variables actuelle: 14 </b>
+                <p class="normal-font">- <b>Nombre de variables actuelles: 14 </b>
                 """, unsafe_allow_html=True)
