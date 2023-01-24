@@ -3,38 +3,43 @@ import matplotlib.pyplot as plt
 import pandas as pd
 import numpy as np
 import geopandas as gpd
+from io import BytesIO
 
 DATASET_FOLDER = '../data/'
 
 def app():
+    st.markdown("""<style>.normal-font {font-size:13.5pt}</style>""", unsafe_allow_html=True)
     st.title("Présentation du projet")
     st.header("Contexte et objectif")
     st.markdown("""
-    Ce projet porte sur l'étude d'une série chronologique regroupant environ 10 années d'observations météorologiques quotidiennes en Australie.
+                <p class="normal-font">Ce projet porte sur l'étude d'une série chronologique regroupant environ 10 années d'observations météorologiques quotidiennes en Australie.
+                <p class="normal-font">L'objectif principal est de prédire les précipitations du jour suivant l'observation à l'aide de la variable cible "RainTomorrow".
+                <p class="normal-font">Le sujet proposé permet la mise en pratique des connaissances acquises pendant la formation.
+                """, unsafe_allow_html=True)
     
-    L'objectif principal est de prédire les précipitations du jour suivant l'observation à l'aide de la variable cible "RainTomorrow".
-    
-    Le sujet proposé permet la mise en pratique des connaissances acquises pendant la formation.
-    """)
-    
-    st.subheader("Sources de données")
+    st.header("Sources de données")
     st.markdown("""
-    The Bureau of Meteorology in Australia :
-    http://www.bom.gov.au/climate/data/
-    
-    Ces données sont également disponibles librement sur le site Kaggle à partir du lien suivant : https://www.kaggle.com/datasets/jsphyg/weather-dataset-rattle-package
-    """)      
+                <p class="normal-font">The Bureau of Meteorology in Australia :
+                """, unsafe_allow_html=True)      
 
-    st.subheader("Chiffres clés")
     st.markdown("""
-    Les données disponibles vont de 2008 à 2017 et concernent 49 villes d'Australie.
-    
-    Le jeu de données se compose de 23 variables et 145 460 observations.
-    
-    La pluviométrie annuelle moyenne varie de 300 mm à 1 400 mm dans les zones les plus humides.
-    A titre de comparaison, les précipitations annuelles moyennes en France métropolitaine s’échelonnent de 500 à 2000 mm par an.
-    
-    """)
+                http://www.bom.gov.au/climate/data
+                """)
+    st.markdown("""
+                <p class="normal-font">Ces données sont également disponibles librement sur le site Kaggle à partir du lien suivant :
+                """, unsafe_allow_html=True)    
+
+    st.markdown("""
+                https://www.kaggle.com/datasets/jsphyg/weather-dataset-rattle-package
+                """)     
+
+    st.header("Chiffres clés")
+    st.markdown("""
+                <p class="normal-font">Les données disponibles vont de 2008 à 2017 et concernent <b>49 villes d'Australie</b>.</p>
+                <p class="normal-font">Le jeu de données se compose de <b>23 variables</b> et <b>145 460 observations</b>.</p>
+                <p class="normal-font">La <b>pluviométrie annuelle moyenne</b> varie <b>de 300 mm à 1 400 mm</b> dans les zones les plus humides.
+                A titre de comparaison, les précipitations annuelles moyennes en France métropolitaine s’échelonnent de 500 à 2000 mm par an.
+                """, unsafe_allow_html=True)
     
     data_load_state = st.text('Loading data...')
     df = pd.read_csv(DATASET_FOLDER + "weatherAUS.csv")
@@ -68,7 +73,7 @@ def app():
     df_lat_long = df1.merge(df2, left_on="Ville", right_on="Location")
     
     # cartographie des précipitations
-    fig,ax = plt.subplots(figsize=(10,8))
+    fig,ax = plt.subplots(figsize=(10,6))
     countries = gpd.read_file(gpd.datasets.get_path("naturalearth_lowres"))
     countries[countries["name"]=="Australia"].plot(color="lightgrey", ax=ax)
     
@@ -76,4 +81,8 @@ def app():
                              title="Précipitations en mm de 2008 à 2017",ax=ax)
     ax.grid(b=True,alpha=0.5)
     
-    st.pyplot(fig)
+    buf = BytesIO()
+    fig.savefig(buf, format="png")
+    st.image(buf)
+    
+    #st.pyplot(fig)
