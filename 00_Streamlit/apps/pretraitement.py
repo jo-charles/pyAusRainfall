@@ -4,8 +4,10 @@ import pandas as pd
 import numpy as np
 import seaborn as sns
 from io import BytesIO
+from PIL import Image
 
 DATASET_FOLDER = '../data/'
+IMAGE_FOLDER = 'images/'
 
 def app():
     st.markdown("""<style>.normal-font {font-size:13.5pt}</style>""", unsafe_allow_html=True)
@@ -80,19 +82,20 @@ def app():
     
     st.header("Corrélation de variables")
     
-    df = pd.read_csv("../data/weatherAUS_Rev0.csv", index_col=0)
-    # matrice de corrélation
-    fig, ax = plt.subplots(figsize=(13,13))
-    annot_kws={'fontsize':10, 'color':"k", 'verticalalignment':'center'}
-    sns.heatmap(df.corr(), linewidths=0.5, annot=True, annot_kws=annot_kws, fmt=".2f", ax=ax, cmap='coolwarm', center=0)
-    plt.title('Matrice de corrélation du jeu de données', fontsize="small")
+    # df = pd.read_csv("../data/weatherAUS_Rev0.csv", index_col=0)
+    # # matrice de corrélation
+    # fig, ax = plt.subplots(figsize=(15,12))
+    # annot_kws={'fontsize':10, 'color':"k", 'verticalalignment':'top'}
+    # sns.heatmap(df.corr(), linewidths=0.5, annot=True, annot_kws=annot_kws, fmt=".2f", ax=ax, cmap='coolwarm', center=0)
+    # plt.title('Matrice de corrélation du jeu de données')
     
-    buf = BytesIO()
-    fig.savefig(buf, format="png")
-    st.image(buf)
-    #st.pyplot(fig)
+    # buf = BytesIO()
+    # fig.savefig(buf, format="png")
+    # st.image(buf)
+    # #st.pyplot(fig)
 
-
+    img = Image.open(IMAGE_FOLDER + "matrice_corr.png")
+    st.image(img, width = 600, caption = "")
     
     st.markdown("""
                 <p class="normal-font">- suppression des variables les moins corrélées à la variable cible (choix: 'inférieur à 0.15 en valeur absolue')
@@ -102,6 +105,7 @@ def app():
                 <p class="normal-font">- suppression de la variable "Cloud9am", moins corrélée à la variable cible que "Cloud3pm"
                 <p class="normal-font">- suppression de la variable "MaxTemp", moins corrélée à la variable cible que "Temp3pm"
                 """, unsafe_allow_html=True)
+    
     
     st.header("Standardisation")
     st.markdown("""
