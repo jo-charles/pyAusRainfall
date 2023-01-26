@@ -40,18 +40,20 @@ def app():
                 ['RainToday', 'vaut 1 si les précipitations (en mm) dans les 24 heures avant 9h sont supérieur à 1 mm, 0 sinon'],
                 ['RainTomorrow', 'vaut 1 si les précipitations (en mm) du lendemain sont supérieur à 1 mm, 0 sinon']
                 ])
-                    
-    df1 = pd.DataFrame(ar, columns=['Variable', 'Description'])
-                 
-    st.dataframe(df1,300,600)
+    if st.checkbox("Afficher les variables "):                
+        df1 = pd.DataFrame(ar, columns=['Variable', 'Description'])
+        st.dataframe(df1,300,600)
 
-
-    data_load_state = st.text('Loading data...')
-    data = pd.read_csv(DATASET_FOLDER + "weatherAUS.csv")
-    data_load_state.text("")
-    
-    if st.checkbox("Afficher le résumé "):
+    if st.checkbox("Afficher un échantion des données "):
+        data_load_state = st.text('Loading data...')
+        data = pd.read_csv(DATASET_FOLDER + "weatherAUS.csv")
+        data_load_state.text("")
         st.dataframe(data.head(3))
+        
+    if st.checkbox("Afficher le résumé statistique des données "):
+        data_load_state = st.text('Loading data...')
+        data = pd.read_csv(DATASET_FOLDER + "weatherAUS.csv")
+        data_load_state.text("")        
         st.write(data.describe())
   
     st.header("Gestion des valeurs manquantes")
