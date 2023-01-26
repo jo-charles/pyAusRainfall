@@ -129,4 +129,3 @@ dmypy.json
 .pyre/
 rainfall_test.csv
 rainfall_train.csv
-04_Model_Interpretability/rf_model.sav
