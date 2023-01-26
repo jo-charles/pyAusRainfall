@@ -9,13 +9,14 @@ import matplotlib.pyplot as plt
 from sklearn.inspection import permutation_importance
 
 def app():
+    st.markdown("""<style>.normal-font {font-size:13.5pt}</style>""", unsafe_allow_html=True)
     st.title("Démonstration")
     st.header("Predictions avec le modele")
     st.subheader("Interpretabilité du modèle")
     st.markdown(
             """
-            Une étude comparative des performances des différents modèles a mené à la sélection de la forêt aléatoire comme modèle de choix pour ce projet. Cependant, le modèle le plus performant n'est pas toujours le meilleur choix si son interprétabilité n'est pas suffisante pour le but final. L'importance des différentes features a donc été étudiée avec ceci en tête. Voici l'importance des features sur les résultats du modèle, en considérant la diminution moyenne de l'impureté pour tous les arbres de notre forêt.
-            """
+            <p class="normal-font">Une étude comparative des performances des différents modèles a mené à la sélection de la forêt aléatoire comme modèle de choix pour ce projet. Cependant, le modèle le plus performant n'est pas toujours le meilleur choix si son interprétabilité n'est pas suffisante pour le but final. L'importance des différentes features a donc été étudiée avec ceci en tête. Voici l'importance des features sur les résultats du modèle, en considérant la diminution moyenne de l'impureté pour tous les arbres de notre forêt.
+            </p>""", unsafe_allow_html=True
     )
     cola, colb = st.columns([70,30])
     # import model
@@ -31,12 +32,12 @@ def app():
     
     st.markdown(
         """
-        Nous pouvons utiliser les resultats de l'importance des features pour démontrer le pouvoir de prédiction du modèle, et comprendre de manière plus intuitive comment les interprêter. D'abord, nous allons sélectionner une donnée au hasard parmi tout le data set, et se focaliser seulement sur les variables les plus importantes. Ensuite, nous allons utiliser le modèle pour prédire s'il faut prévoir le parapluie le jour suivant, en precisant la confidence de cette prédiction. Enfin, nous allons vérifier si la prédiction était correcte, en révélant le résultat réel."""
+        <p class="normal-font">Nous pouvons utiliser les resultats de l'importance des features pour démontrer le pouvoir de prédiction du modèle, et comprendre de manière plus intuitive comment les interprêter. D'abord, nous allons sélectionner une donnée au hasard parmi tout le data set, et se focaliser seulement sur les variables les plus importantes. Ensuite, nous allons utiliser le modèle pour prédire s'il faut prévoir le parapluie le jour suivant, en precisant la confidence de cette prédiction. Enfin, nous allons vérifier si la prédiction était correcte, en révélant le résultat réel.</p>""", unsafe_allow_html=True
     )
     
     
     # insert buttons for demonstration section
-    choice = st.button(label="Choix au hasard", key = 'c')
+    choice = st.button(label="Choix au hasard 🎲", key = 'c')
     
     #col1, col2, col3, col4, col5 = st.columns(5)
     if "selected" not in st.session_state:
@@ -90,9 +91,9 @@ def app():
                 st.write(":sun_small_cloud:")
     
     st.markdown(
-        """L'exactitude et la précision généralisées du modèle est discutée en détails dans la section « modélisation » de cette présentation. Ici, le plus utile – du point de vue de l’interprétation de la démonstration – est de savoir plus spécifiquement les faiblesses du modèle. C’est-à-dire : à quel point pouvons-nous faire confiance aux prédictions qui viennent de nous être présentées ? Le pourcentage de confiance est une première étape. Un pourcentage plus élevé montre une plus grande confiance du modèle que sa prédiction est correcte. Un pourcentage plus bas montre que la donnée est plus difficile à classer, et que le modèle à moins confiance en sa prédiction.
+        """<p class="normal-font">L'exactitude et la précision généralisées du modèle est discutée en détails dans la section « modélisation » de cette présentation. Ici, le plus utile – du point de vue de l’interprétation de la démonstration – est de savoir plus spécifiquement les faiblesses du modèle. C’est-à-dire : à quel point pouvons-nous faire confiance aux prédictions qui viennent de nous être présentées ? Le pourcentage de confiance est une première étape. Un pourcentage plus élevé montre une plus grande confiance du modèle que sa prédiction est correcte. Un pourcentage plus bas montre que la donnée est plus difficile à classer, et que le modèle à moins confiance en sa prédiction.
 La matrice de confusion donne une idée de la fréquence à laquelle on prendra un parapluie pour rien, et de la même façon les occasions où il aurait été utile, mais avait été laissé sagement à la maison. Ceux qui aiment vivre dangereusement peuvent se fier immanquablement aux prédictions. Ceux d’une nature plus prudente pourront considérer de prendre un parapluie juste au cas où, les jours où la pluie n’est pas prédite, mais où la confiance est faible.
-        """
+        </p>""", unsafe_allow_html=True
     )
     conf_array = np.array([[25653/(25653+7237), 7237/(25653+7237)],[1899/(1899+7448),7448/(1899+7448)]])
     df = pd.DataFrame(conf_array, columns = ['prevision 0, pas de pluie', 'prevision 1, pluie'])
@@ -102,8 +103,8 @@ La matrice de confusion donne une idée de la fréquence à laquelle on prendra 
     
     st.markdown(
         """
-        La répétition de ce processus permet à l'utilisateur de remarquer soi-même l'influence des features les plus importantes. Cependant, il serait intéressant de pouvoir contrôler directement ces features, pour voir leur effet sur la prédiction. Les trois curseurs ci-dessous permettent de modifier la valeur des trois features sélectionnées (entre les valeurs minimum et maximum pour tout le dataset), et de voir si cela fait changer la prédiction finale du modèle.
-        """
+        <p class="normal-font">La répétition de ce processus permet à l'utilisateur de remarquer soi-même l'influence des features les plus importantes. Cependant, il serait intéressant de pouvoir contrôler directement ces features, pour voir leur effet sur la prédiction. Les trois curseurs ci-dessous permettent de modifier la valeur des trois features sélectionnées (entre les valeurs minimum et maximum pour tout le dataset), et de voir si cela fait changer la prédiction finale du modèle.
+        </p>""", unsafe_allow_html=True
     )
     
 #    Humidity_fiddled = st.slider('Humidity', 0.0,100.0,24.0)
