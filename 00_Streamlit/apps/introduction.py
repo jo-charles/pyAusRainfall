@@ -19,7 +19,7 @@ def app():
     
     st.header("Sources de données")
     st.markdown("""
-                <p class="normal-font">Le "Bureau of Meteorology" en Australie :
+                <p class="normal-font">The Bureau of Meteorology in Australia :
                 """, unsafe_allow_html=True)      
 
     st.markdown("""

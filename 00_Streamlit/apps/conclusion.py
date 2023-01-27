@@ -15,5 +15,5 @@ def app():
                 <p class="normal-font"> - utilisation d'autres méthodes de machine learning, comme l’Anomaly Detection ou l’Active Learning
                 <p class="normal-font"> - utilisation de réseaux de neurones récurrents par des méthodes de Deep Learning avec "Keras"
                 <p class="normal-font"> - utilisation de "Spark ML" afin d'optimiser les performances des algorithmes de classification tels que "Logistic Regression", "Decision Tree", "Random Forest" et "SVM"
-                <p class="normal-font"> - mise en place d'une pipeline avec barre de seuil
+                <p class="normal-font"> - Mise en place d'une pipeline avec barre de seuil
                 """, unsafe_allow_html=True)
