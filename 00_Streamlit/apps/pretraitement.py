@@ -60,10 +60,10 @@ def app():
 
     st.markdown("""
                 <p class="normal-font">- 4 variables quantitatives possèdent environ 40% de valeurs manquantes (Sunshine, Evaporation, Cloud3pm, Cloud9am).\n
-                <p class="normal-font">Pour gérer ces valeurs manquantes, Nous avons utilisé le module Impute de scikit-learn et en particulier le transformer KNNImputer.\n
-                <p class="normal-font">Cette fonctionnalité permet de nettoyer notre dataset des valeurs manquantes qui le composes en remplaçant les valeurs manquantes d'un échantillon par les valeurs de ses plus proches voisin.
-                <p class="normal-font">S'agissant de de données temporelle, nous avons décidé d'interpoler les valeur manquante à l'aide de pandas'
-                <p class="normal-font">- Enfin nous avons remplacer les valeurs manquantes pour les variables qualitatives en utilisant le mode
+                <p class="normal-font">Pour gérer ces valeurs manquantes, Nous avons utilisé le module "Impute" de scikit-learn et en particulier le transformer "KNNImputer".\n
+                <p class="normal-font">Cette fonctionnalité permet de nettoyer notre dataset des valeurs manquantes qui le composeent en remplaçant les valeurs manquantes d'un échantillon par les valeurs de ses plus proches voisins.
+                <p class="normal-font">S'agissant de données temporelles, nous avons décidé d'interpoler les valeurs manquantes à l'aide de Pandas.
+                <p class="normal-font">- Enfin nous avons remplacé les valeurs manquantes pour les variables qualitatives en utilisant le mode.
                 """, unsafe_allow_html=True)
 
 
@@ -77,8 +77,8 @@ def app():
     st.header("Gestion des variables catégorielles")
     
     st.markdown("""
-                <p class="normal-font">Afin d'alléger notre model, nous avons décidé de ne pas nous servir des variables catégorielles suivantes ['Location', 'WindGustDir', 'WindDir9am', 'WindDir3pm']
-                <p class="normal-font">La seule variable catégorielle que nous avons gardé est la variable 'climat' qui est basée sur la variable Location.
+                <p class="normal-font">Afin d'alléger notre modèle, nous avons décidé de ne pas nous servir des variables catégorielles suivantes ['Location', 'WindGustDir', 'WindDir9am', 'WindDir3pm']
+                <p class="normal-font">La seule variable catégorielle que nous avons gardée est la variable 'climat' qui est basée sur la variable Location.
                 """, unsafe_allow_html=True)
     
     
