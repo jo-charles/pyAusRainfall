@@ -2,6 +2,7 @@ import streamlit as st
 import seaborn as sns
 import matplotlib.pyplot as plt
 import pandas as pd
+from scipy.stats import chi2_contingency
 from io import BytesIO
 
 DATASET_FOLDER = '../data/'
@@ -37,6 +38,16 @@ def app():
     fig.savefig(buf, format="png")
     st.image(buf)
 
+    table = pd.crosstab(data['RainToday'], data['RainTomorrow'])
+    resultats_test = chi2_contingency(table)
+
+    statistique = resultats_test[0]
+    p_value = resultats_test[1]
+    degre_liberte = resultats_test[2]
+
+    if st.checkbox("*Résultat du test du de chi2*"):
+        st.write("""*statistique: 13799.479649324368,  p_value: 0.0*
+""", unsafe_allow_html=True)
     #st.pyplot(fig)
 
     st.write("""
@@ -61,12 +72,26 @@ Les variables "RainToday" et "RainTomorrow" ne contiennent que deux modalités q
     st.write(data.describe())
  
     st.header("Visualisation des outliers") 
-    
-    fig2 = plt.figure(figsize = (6,6))
-    sns.boxplot(data = data[['Humidity9am','Humidity3pm','WindGustSpeed']]);
-
+    st.write("""
+    <p class="normal-font">En statistique,un outlier est une donnée aberrante ou une observation qui est « distante » des autres observations effectuées sur le même phénomène, c'est-à-dire qu'elle contraste grandement avec les valeurs « normalement » mesurées.
+    """, unsafe_allow_html=True)
+    fig2 = plt.figure(figsize = (6, 6))
+    sns.boxplot(data = data[['Evaporation','Sunshine']]);
+    plt.title("Boxplot des variables Evaporation et Sunshine", fontsize=12)
     buf = BytesIO()
     fig2.savefig(buf, format="png")
     st.image(buf)
 
-    #st.pyplot(fig2)
+    if st.checkbox("Afficher les outliers pour les variables de températures "):               
+        fig3 = plt.figure(figsize = (10, 6))
+        sns.boxplot(data = data[['MinTemp','MaxTemp','Temp9am','Temp3pm']]);
+        buf = BytesIO()
+        fig3.savefig(buf, format="png")
+        st.image(buf)
+
+    if st.checkbox("Afficher les outliers pour les variables du vents "):               
+        fig4 = plt.figure(figsize = (10, 6))
+        sns.boxplot(data = data[['WindGustSpeed','WindSpeed9am','WindSpeed3pm']]);
+        buf = BytesIO()
+        fig4.savefig(buf, format="png")
+        st.image(buf)
