@@ -20,7 +20,7 @@ apps.run()
 with st.sidebar:
     st.markdown("""
     ## **Promotion DS Continu - Avril 2022**
-    [GitHub](https://github.com/DataScientest-Studio/pyAusRainfall)
+    [GitHub](https://github.com/jo-charles/pyAusRainfall)
 
     ### Réalisé par :
     - Anne-Claire OGIERAIKHI
